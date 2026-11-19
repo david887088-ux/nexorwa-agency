@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace https://YOUR-DOMAIN.com with your real domain -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://YOUR-DOMAIN.com/</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://YOUR-DOMAIN.com/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://YOUR-DOMAIN.com/?lang=de"/>
+    <lastmod>2026-11-19</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.com/case-studies/</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://YOUR-DOMAIN.com/case-studies/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.com/case-studies/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://YOUR-DOMAIN.com/case-studies/?lang=de"/>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.com/case-studies/aurum-motors.html</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://YOUR-DOMAIN.com/case-studies/aurum-motors.html?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.com/case-studies/aurum-motors.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://YOUR-DOMAIN.com/case-studies/aurum-motors.html?lang=de"/>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.com/case-studies/noir-atelier.html</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://YOUR-DOMAIN.com/case-studies/noir-atelier.html?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.com/case-studies/noir-atelier.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://YOUR-DOMAIN.com/case-studies/noir-atelier.html?lang=de"/>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.com/case-studies/vertex-estates.html</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://YOUR-DOMAIN.com/case-studies/vertex-estates.html?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.com/case-studies/vertex-estates.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://YOUR-DOMAIN.com/case-studies/vertex-estates.html?lang=de"/>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.com/case-studies/maison-lumiere.html</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://YOUR-DOMAIN.com/case-studies/maison-lumiere.html?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.com/case-studies/maison-lumiere.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://YOUR-DOMAIN.com/case-studies/maison-lumiere.html?lang=de"/>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.com/case-studies/ember-and-salt.html</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://YOUR-DOMAIN.com/case-studies/ember-and-salt.html?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.com/case-studies/ember-and-salt.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://YOUR-DOMAIN.com/case-studies/ember-and-salt.html?lang=de"/>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.com/case-studies/quantum-desk.html</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://YOUR-DOMAIN.com/case-studies/quantum-desk.html?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.com/case-studies/quantum-desk.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://YOUR-DOMAIN.com/case-studies/quantum-desk.html?lang=de"/>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.com/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://YOUR-DOMAIN.com/privacy.html?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.com/privacy.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://YOUR-DOMAIN.com/privacy.html?lang=de"/>
+    <lastmod>2026-11-19</lastmod>
+    <priority>0.3</priority>
+  </url>
+</urlset>

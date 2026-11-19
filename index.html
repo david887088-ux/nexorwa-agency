@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NEXORA — Premium Digital Agency</title>
+<meta name="description" content="NEXORA is a premium digital agency: website development, UI/UX design, advertising banners, video editing, social media advertising and SEO.">
+<meta name="theme-color" content="#050505">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<!-- SEO: replace https://YOUR-DOMAIN.com with your real domain in all files (see assets/config.js) -->
+<link rel="canonical" href="https://YOUR-DOMAIN.com/">
+<link rel="alternate" hreflang="uk" href="https://YOUR-DOMAIN.com/?lang=uk">
+<link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.com/?lang=en">
+<link rel="alternate" hreflang="de" href="https://YOUR-DOMAIN.com/?lang=de">
+<link rel="alternate" hreflang="x-default" href="https://YOUR-DOMAIN.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NEXORA">
+<meta property="og:url" content="https://YOUR-DOMAIN.com/">
+<meta property="og:title" content="NEXORA — Premium Digital Agency">
+<meta property="og:description" content="Websites, ad creatives, video and social media campaigns for brands that want to look premium and grow faster.">
+<meta property="og:image" content="https://YOUR-DOMAIN.com/og/og-home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NEXORA — premium digital agency: websites, creatives, video and advertising">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="uk_UA">
+<meta property="og:locale:alternate" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NEXORA — Premium Digital Agency">
+<meta name="twitter:description" content="Websites, ad creatives, video and social media campaigns for brands that want to look premium.">
+<meta name="twitter:image" content="https://YOUR-DOMAIN.com/og/og-home.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050505'/%3E%3Cpath d='M18 46V18h6l16 18V18h6v28h-6L24 28v18z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Unbounded:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"ProfessionalService","@id":"https://YOUR-DOMAIN.com/#org","name":"NEXORA","url":"https://YOUR-DOMAIN.com/","image":"https://YOUR-DOMAIN.com/og/og-home.jpg","description":"Premium digital agency: website development, UI/UX design, advertising banners, video editing, social media advertising and SEO."},
+ {"@type":"WebSite","@id":"https://YOUR-DOMAIN.com/#website","url":"https://YOUR-DOMAIN.com/","name":"NEXORA","inLanguage":["uk","en","de"],"publisher":{"@id":"https://YOUR-DOMAIN.com/#org"}}
+]}
+</script>
+<!-- Site settings (contacts, address, GA4, reviews) + cookie consent / analytics -->
+<script src="assets/config.js"></script>
+<script src="assets/consent.js" defer></script>
+<script src="assets/mockups.js"></script>
+<link rel="stylesheet" href="assets/mockups.css">
+
+<!-- three.js for the 3D robot (loaded from CDN) -->
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div>
+    <div class="loader-logo"><span>NEXORA</span></div>
+    <div class="loader-bar"><i></i></div>
+  </div>
+</div>
+
+<div class="cursor" id="cursor"></div><div class="cursor-dot" id="cursorDot"></div>
+<div class="bg-fx" aria-hidden="true"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i><div class="bg-grid"></div></div>
+<div class="progress" id="progress"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="wrap nav">
+    <a href="#home" class="logo" aria-label="NEXORA">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="#fff"><path d="M5 20V4h3l8 9.5V4h3v16h-3L8 10.5V20z"/></svg></span>
+      NEXORA
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="#work" data-i18n="nav.work">Work</a></li>
+      <li><a href="#process" data-i18n="nav.process">Process</a></li>
+      <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switch" role="group" data-i18n-aria="lang.label" aria-label="Language"></div>
+      <a href="#contact" class="btn btn-primary btn-sm"><span data-i18n="nav.cta">Start a project</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" data-i18n-aria="nav.menu" aria-label="Menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-hidden="true">
+  <ol>
+    <li><a href="#services" data-i18n="nav.services">Services</a></li>
+    <li><a href="#work" data-i18n="nav.work">Work</a></li>
+    <li><a href="#process" data-i18n="nav.process">Process</a></li>
+    <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+    <li><a href="#about" data-i18n="nav.about">About</a></li>
+    <li><a href="#faq" data-i18n="footer.faq">FAQ</a></li>
+    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+  </ol>
+  <div class="menu-foot">
+    <div class="lang-switch" role="group" data-i18n-aria="lang.label" aria-label="Language"></div>
+    <a href="#contact" class="btn btn-primary btn-sm"><span data-i18n="nav.cta">Start a project</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</nav>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow hero-fade"><span class="dot"></span><span data-i18n="hero.eyebrow">Next-generation digital agency</span></div>
+      <h1>
+        <span class="ln"><span data-i18n="hero.l1">We build</span></span>
+        <span class="ln"><span class="outline" data-i18n="hero.l2">digital</span></span>
+        <span class="ln"><span data-i18n="hero.l3">future.</span></span>
+      </h1>
+      <p class="hero-sub hero-fade" data-i18n="hero.sub">Websites, ad creatives, video and social media campaigns for brands that want to look premium and grow faster.</p>
+      <div class="hero-ctas hero-fade">
+        <a href="#contact" class="btn btn-primary magnetic" data-order="web"><span data-i18n="hero.cta1">Order a project</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#contact" class="btn btn-ghost magnetic"><span data-i18n="hero.cta3">Contact us</span></a>
+      </div>
+      <div class="hero-meta hero-fade">
+        <a href="#work" class="link-arrow"><span data-i18n="hero.cta2">View work</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <span class="hero-quick" id="heroQuick"></span>
+        <span class="reply-badge" data-reply hidden></span>
+      </div>
+    </div>
+    <div class="robot-wrap" id="robotWrap">
+      <canvas id="robot" role="img" data-i18n-aria="aria.robot" aria-label="Animated 3D robot — the NEXORA mascot"></canvas>
+      <div class="robot-fallback" role="img" data-i18n-aria="aria.robot" aria-label="Animated 3D robot — the NEXORA mascot">
+        <svg viewBox="0 0 240 300" fill="none">
+          <defs>
+            <linearGradient id="fbS" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#d9d9de"/><stop offset="1" stop-color="#8d8d94"/></linearGradient>
+            <linearGradient id="fbM" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2b30"/><stop offset="1" stop-color="#0b0b0d"/></linearGradient>
+            <linearGradient id="fbV" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#30333a"/><stop offset=".4" stop-color="#050506"/></linearGradient>
+            <radialGradient id="fbG"><stop offset="0" stop-color="#fff"/><stop offset=".3" stop-color="#dbe8ff" stop-opacity=".6"/><stop offset="1" stop-color="#dbe8ff" stop-opacity="0"/></radialGradient>
+          </defs>
+          <ellipse cx="120" cy="286" rx="70" ry="8" fill="url(#fbG)" opacity=".5"/>
+          <path d="M150 34l14-26" stroke="#333" stroke-width="3"/><circle cx="165" cy="7" r="12" fill="url(#fbG)"/><circle cx="165" cy="7" r="4" fill="#fff"/>
+          <rect x="44" y="132" width="34" height="96" rx="16" fill="url(#fbS)"/><rect x="162" y="132" width="34" height="96" rx="16" fill="url(#fbS)"/>
+          <circle cx="61" cy="134" r="24" fill="url(#fbS)"/><circle cx="179" cy="134" r="24" fill="url(#fbS)"/>
+          <path d="M70 120h100q14 0 12 16l-10 88q-2 14-16 14H84q-14 0-16-14l-10-88q-2-16 12-16z" fill="url(#fbS)"/>
+          <rect x="88" y="142" width="64" height="46" rx="12" fill="url(#fbM)"/>
+          <circle cx="120" cy="165" r="22" fill="url(#fbG)" opacity=".7"/><circle cx="120" cy="165" r="11" stroke="#fff" stroke-width="3"/>
+          <rect x="104" y="104" width="32" height="20" rx="5" fill="url(#fbM)"/>
+          <rect x="62" y="30" width="116" height="80" rx="34" fill="url(#fbS)"/>
+          <rect x="54" y="56" width="14" height="26" rx="6" fill="url(#fbM)"/><rect x="172" y="56" width="14" height="26" rx="6" fill="url(#fbM)"/>
+          <rect x="74" y="50" width="92" height="38" rx="17" fill="url(#fbV)"/>
+          <circle cx="98" cy="69" r="13" fill="url(#fbG)"/><circle cx="142" cy="69" r="13" fill="url(#fbG)"/>
+          <rect x="88" y="66" width="20" height="6" rx="3" fill="#fff"/><rect x="132" y="66" width="20" height="6" rx="3" fill="#fff"/>
+          <path d="M82 56h50" stroke="#fff" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="robot-tag t1"><b>3D</b> · <span data-i18n="hero.tag1">Creative tech</span></div>
+      <div class="robot-tag t2"><b>24/7</b> · <span data-i18n="hero.tag2">Online presence</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint"><i></i><span data-i18n="hero.scroll">Scroll</span></div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="mq"></div>
+  <div class="marquee-track" id="mq2"></div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv">
+        <div class="label"><b>01</b><span data-i18n="svc.label">Services</span></div>
+        <h2 class="h2" data-i18n-html="svc.title">What we <em>do</em></h2>
+      </div>
+      <p class="lead rv" style="--d:.1s" data-i18n="svc.lead">Full-cycle digital production — from the first idea to a launched product and a campaign that brings clients.</p>
+    </div>
+    <div class="services-grid" id="servicesGrid"></div>
+    <div class="svc-cta gc rv">
+      <p data-i18n="svc.cta">Not sure what you need? We'll help you choose the right solution.</p>
+      <a href="#contact" class="btn btn-primary"><span data-i18n="svc.ctaBtn">Get a free consultation</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO ============ -->
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv">
+        <div class="label"><b>02</b><span data-i18n="work.label">Portfolio</span></div>
+        <h2 class="h2" data-i18n-html="work.title">Selected <em>concepts</em></h2>
+      </div>
+      <p class="lead rv" style="--d:.1s" data-i18n="work.lead">Six demo projects that show our design approach across different industries.</p>
+    </div>
+    <div class="work-grid" id="workGrid"></div>
+    <div class="work-all rv"><a href="case-studies/" class="btn btn-ghost"><span data-i18n="work.all">All case studies</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <p class="work-note rv" data-i18n="work.note">All projects shown are demo concepts created to showcase our style and capabilities — not commissioned client work.</p>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv">
+        <div class="label"><b>03</b><span data-i18n="proc.label">Process</span></div>
+        <h2 class="h2" data-i18n-html="proc.title">How we <em>work</em></h2>
+      </div>
+      <p class="lead rv" style="--d:.1s" data-i18n="proc.lead">A clear process with no surprises: you always know what stage your project is at.</p>
+    </div>
+    <div class="process" id="processGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv">
+        <div class="label"><b>04</b><span data-i18n="price.label">Pricing</span></div>
+        <h2 class="h2" data-i18n-html="price.title">Transparent <em>pricing</em></h2>
+      </div>
+      <p class="lead rv" style="--d:.1s" data-i18n="price.lead">Choose a starting package — we'll adapt it to your goals. The final cost depends on scope.</p>
+    </div>
+    <div class="pricing" id="pricingGrid"></div>
+    <p class="price-note rv" data-i18n="price.note">Banners, video editing and ad campaigns are also available as separate services — ask for a quote.</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="wrap about">
+    <div class="about-text rv">
+      <div class="label"><b>05</b><span data-i18n="about.label">About</span></div>
+      <h2 class="h2" data-i18n-html="about.title">Design-first.<br><em>Detail-obsessed.</em></h2>
+      <p data-i18n="about.p1">NEXORA is a digital agency at the intersection of design, technology and marketing. We create digital products that make brands look the way they deserve.</p>
+      <p data-i18n="about.p2">We combine minimalist aesthetics, modern technology and clear strategy — so every project doesn't just impress, it works.</p>
+    </div>
+    <div class="about-visual rv" style="--d:.15s"><div class="orbit" id="orbit"></div><div class="values" id="valuesGrid"></div></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<!-- ============ REVIEWS (genuine only — managed in assets/config.js) ============ -->
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv">
+        <div class="label"><b>06</b><span data-i18n="rev.label">Reviews</span></div>
+        <h2 class="h2" data-i18n-html="rev.title">What clients <em>say</em></h2>
+      </div>
+      <p class="lead rv" style="--d:.1s" data-i18n="rev.lead">We publish only genuine reviews from real clients — with their permission.</p>
+    </div>
+    <div id="reviewsBox" class="rv"></div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="wrap faq">
+    <div class="faq-side rv">
+      <div class="label"><b>07</b><span data-i18n="faq.label">FAQ</span></div>
+      <h2 class="h2" data-i18n-html="faq.title">Frequently asked <em>questions</em></h2>
+      <p data-i18n="faq.lead">The essentials about cost, timelines and working with us.</p>
+      <p style="margin:0 0 14px;color:#fff;font-weight:600" data-i18n="faq.more">Didn't find your answer?</p>
+      <a href="#contact" class="btn btn-ghost"><span data-i18n="faq.ask">Ask a question</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="faq-list rv" style="--d:.1s" id="faqList"></div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap contact">
+    <div class="rv">
+      <div class="label"><b>08</b><span data-i18n="contact.label">Contact</span></div>
+      <h2 class="h2" data-i18n-html="contact.title">Let's build something <em>remarkable</em></h2>
+      <p class="contact-lead" data-i18n="contact.lead">Tell us about your project and we'll get back to you as soon as possible with ideas and an estimate.</p>
+      <p class="reply-badge" data-reply hidden></p>
+      <div class="direct" id="direct"></div>
+    </div>
+
+    <form class="form gc rv" id="contactForm" novalidate style="--d:.1s">
+      <div class="form-grid">
+        <div class="field">
+          <label for="f-name" data-i18n="form.name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required data-i18n-ph="form.namePh" placeholder="John Smith">
+          <span class="err"></span>
+        </div>
+        <div class="field">
+          <label for="f-email" data-i18n="form.email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@company.com">
+          <span class="err"></span>
+        </div>
+        <div class="field">
+          <label for="f-phone"><span data-i18n="form.phone">Phone or Telegram</span> <span class="opt" data-i18n="form.optional">(optional)</span></label>
+          <input id="f-phone" name="phone" type="text" autocomplete="tel" placeholder="+380 / @username">
+          <span class="err"></span>
+        </div>
+        <div class="field">
+          <label for="f-service" data-i18n="form.service">Service</label>
+          <select id="f-service" name="service" required></select>
+          <span class="err"></span>
+        </div>
+        <div class="field full">
+          <label for="f-budget" data-i18n="form.budget">Budget</label>
+          <select id="f-budget" name="budget"></select>
+          <span class="err"></span>
+        </div>
+        <div class="field full">
+          <label for="f-msg" data-i18n="form.msg">About your project</label>
+          <textarea id="f-msg" name="message" required data-i18n-ph="form.msgPh" placeholder="Goals, timeline, links to references…"></textarea>
+          <span class="err"></span>
+        </div>
+        <div class="hp" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
+        <label class="check" id="consentWrap">
+          <input type="checkbox" name="consent" id="f-consent">
+          <span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span>
+          <span class="consent-label" data-i18n-html="form.consentHtml">I agree to the processing of my personal data as described in the <a href="privacy.html">privacy policy</a>.</span>
+        </label>
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        <div class="fallback-send" id="fallbackSend"></div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary btn-block" id="sendBtn">
+            <span data-i18n="form.send">Send message</span>
+            <svg class="send-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <span class="spinner"></span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ LOCATION / MAP (address in assets/config.js) ============ -->
+<section class="section" id="location">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="rv">
+        <div class="label"><b>09</b><span data-i18n="loc.label">Location</span></div>
+        <h2 class="h2" data-i18n-html="loc.title">How to <em>find us</em></h2>
+      </div>
+      <p class="lead rv" style="--d:.1s" data-i18n="loc.lead">Meet us in person or reach us online.</p>
+    </div>
+    <div class="loc-grid rv">
+      <div class="loc-info" id="locInfo"></div>
+      <div class="map" id="map"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a href="#home" class="logo"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="#fff"><path d="M5 20V4h3l8 9.5V4h3v16h-3L8 10.5V20z"/></svg></span>NEXORA</a>
+        <p data-i18n="footer.tag">Premium digital agency. Websites, creatives, video and advertising for ambitious brands.</p>
+        <address class="foot-addr" id="footAddr" hidden></address>
+      </div>
+      <div>
+        <h4 data-i18n="footer.nav">Navigation</h4>
+        <ul>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#work" data-i18n="nav.work">Work</a></li>
+          <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.more">More</h4>
+        <ul>
+          <li><a href="case-studies/" data-i18n="footer.cases">Case studies</a></li>
+          <li><a href="#faq" data-i18n="footer.faq">FAQ</a></li>
+          <li><a href="privacy.html" data-i18n="footer.privacy">Privacy policy</a></li>
+          <li><button type="button" class="linklike" data-consent-open data-i18n="footer.cookies">Cookie settings</button></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.social">Social</h4>
+        <div class="socials" id="socials"></div>
+      </div>
+    </div>
+    <div class="wordmark" aria-hidden="true">NEXORA</div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> NEXORA. <span data-i18n="footer.rights">All rights reserved.</span></span>
+      <a href="#home" class="to-top"><span data-i18n="footer.top">Back to top</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<div class="float" id="float"></div>
+
+<!-- Sticky order bar (mobile) -->
+<div class="mcta" id="mcta">
+  <a href="#contact" class="btn btn-primary" data-order="web"><span data-i18n="mcta.order">Order a project</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a href="#contact" class="btn btn-ghost" id="mctaMsg"><span data-i18n="mcta.msg">Message us</span></a>
+</div>
+
+<!-- Project modal -->
+<dialog class="modal" id="modal">
+  <div class="modal-inner">
+    <div class="modal-media" id="modalMedia"></div>
+    <div class="modal-body">
+      <button class="modal-close" id="modalClose" data-i18n-aria="modal.close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <span class="badge" data-i18n="work.badge">Concept</span>
+      <h3 id="modalTitle"></h3>
+      <div class="cat" id="modalCat"></div>
+      <h4 data-i18n="modal.about">About the concept</h4>
+      <p id="modalDesc"></p>
+      <h4 data-i18n="modal.features">What's inside</h4>
+      <ul class="feat" id="modalFeat"></ul>
+      <div class="concept-note" data-i18n="modal.note">This is a concept project created by NEXORA to demonstrate style and capabilities. It is not commissioned client work.</div>
+      <div class="modal-actions">
+        <a href="#contact" class="btn btn-primary" id="modalCta"><span data-i18n="modal.cta">I want a similar website</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="case-studies/" class="btn btn-ghost" id="modalCase"><span data-i18n="modal.case">Read the full case study</span></a>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script type="module">
+/* =====================================================================
+   1) CONFIG — now lives in assets/config.js (shared by all pages)
+   ===================================================================== */
+const CONFIG = Object.assign({ address:{}, hours:{}, reviews:[], prices:{ start:490, business:1190, premium:2490 }, currency:'$', privacy:{} }, window.NEXORA_CONFIG || {});
+
+/* =====================================================================
+   2) TRANSLATIONS — Ukrainian / English / German
+   ===================================================================== */
+const I18N = {
+uk: {
+  'meta.title':'NEXORA — Преміальна діджитал-агенція',
+  'meta.desc':'NEXORA — преміальна діджитал-агенція: розробка сайтів, UI/UX-дизайн, рекламні банери, відеомонтаж, реклама в соцмережах і SEO.',
+  'lang.label':'Мова','nav.menu':'Меню',
+  'nav.services':'Послуги','nav.work':'Портфоліо','nav.process':'Процес','nav.pricing':'Ціни','nav.about':'Про нас','nav.contact':'Контакти','nav.cta':'Почати проєкт',
+  'hero.eyebrow':'Діджитал-агенція нового покоління',
+  'hero.l1':'Створюємо','hero.l2':'цифрове','hero.l3':'майбутнє.',
+  'hero.sub':'Сайти, рекламні креативи, відео та кампанії в соцмережах для брендів, які хочуть виглядати преміально й рости швидше.',
+  'hero.cta1':'Почати проєкт','hero.cta2':'Дивитись роботи','hero.scroll':'Гортайте',
+  'hero.tag1':'Креативні технології','hero.tag2':'Присутність онлайн',
+  'mq.1':'Розробка сайтів','mq.2':'UI/UX дизайн','mq.3':'Рекламні банери','mq.4':'Відеомонтаж','mq.5':'Реклама в соцмережах','mq.6':'SEO та аналітика',
+  'svc.label':'Послуги','svc.title':'Що ми <em>робимо</em>',
+  'svc.lead':'Повний цикл діджитал-виробництва — від першої ідеї до запущеного продукту та кампанії, що приводить клієнтів.',
+  'svc.1.t':'Розробка сайтів','svc.1.d':'Швидкі адаптивні сайти та лендинги на сучасних технологіях — від концепції до запуску.','svc.1.g':'Лендинги|Корпоративні|E-commerce',
+  'svc.2.t':'UI/UX дизайн','svc.2.d':'Інтерфейси, які виглядають преміально та конвертують відвідувачів у клієнтів.','svc.2.g':'Прототипи|Дизайн-системи|Mobile',
+  'svc.3.t':'Рекламні банери','svc.3.d':'Статичні та анімовані креативи для реклами, соцмереж і медійних мереж.','svc.3.g':'Статичні|Анімовані|Display',
+  'svc.4.t':'Відеомонтаж','svc.4.d':'Динамічний монтаж для Reels, TikTok, YouTube і рекламних кампаній — з моушн-графікою та кольорокорекцією.','svc.4.g':'Reels|Motion|Колір',
+  'svc.5.t':'Реклама в соцмережах','svc.5.d':'Стратегія, таргетинг і креативи для Meta та TikTok з прозорою звітністю.','svc.5.g':'Meta Ads|TikTok Ads|Звіти',
+  'svc.6.t':'SEO та аналітика','svc.6.d':'Технічне SEO, оптимізація швидкості та налаштування аналітики, щоб вас знаходили.','svc.6.g':'SEO|GA4|Швидкість',
+  'svc.cta':'Не впевнені, що саме потрібно? Допоможемо обрати правильне рішення.','svc.ctaBtn':'Безкоштовна консультація',
+  'work.label':'Портфоліо','work.title':'Обрані <em>концепти</em>',
+  'work.lead':'Шість демо-проєктів, які показують наш підхід до дизайну в різних індустріях.',
+  'work.badge':'Концепт','work.view':'Переглянути',
+  'work.note':'Усі представлені проєкти — демо-концепти, створені для демонстрації нашого стилю та можливостей, а не замовлення клієнтів.',
+  'pf.1.c':'Автосалон преміум-класу','pf.1.d':'Темний кінематографічний сайт для дилера люксових авто: великі фото, плавні переходи та зручний каталог моделей.','pf.1.f':'Каталог авто з фільтрами|Запис на тест-драйв|Галерея 360°|Форма заявки на кредит',
+  'pf.2.c':'Магазин чоловічого одягу','pf.2.d':'Мінімалістичний інтернет-магазин преміального чоловічого одягу в стилі модних журналів.','pf.2.f':'Каталог і кошик|Lookbook-колекції|Підбір розміру|Швидке оформлення замовлення',
+  'pf.3.c':'Агенція нерухомості','pf.3.d':'Сайт для агенції елітної нерухомості з акцентом на архітектуру, локації та довіру.','pf.3.f':'Пошук об’єктів з фільтрами|Карта локацій|Сторінки об’єктів|Запис на перегляд',
+  'pf.4.c':'Люксовий готель','pf.4.d':'Атмосферний сайт бутик-готелю: номери, враження та бронювання в кілька кліків.','pf.4.f':'Галерея номерів|Модуль бронювання|SPA та ресторан|Багатомовність',
+  'pf.5.c':'Ресторан','pf.5.d':'Теплий, апетитний сайт ресторану з меню, атмосферою та онлайн-бронюванням столиків.','pf.5.f':'Інтерактивне меню|Бронювання столика|Події та дегустації|Інтеграція з картами',
+  'pf.6.c':'Цифровий бізнес','pf.6.d':'Сучасний сайт для SaaS або IT-компанії: чітка подача продукту, тарифи та заклики до дії.','pf.6.f':'Презентація продукту|Тарифні плани|Інтеграції|Блог і FAQ',
+  'modal.about':'Про концепт','modal.features':'Що всередині','modal.cta':'Хочу схожий сайт','modal.close':'Закрити',
+  'modal.note':'Це концепт-проєкт, створений NEXORA для демонстрації стилю та можливостей. Це не замовлення клієнта.',
+  'proc.label':'Процес','proc.title':'Як ми <em>працюємо</em>','proc.lead':'Зрозумілий процес без сюрпризів: ви завжди знаєте, на якому етапі ваш проєкт.',
+  'proc.1.t':'Бриф','proc.1.d':'Занурюємося у ваш бізнес, цілі та аудиторію.',
+  'proc.2.t':'Стратегія і дизайн','proc.2.d':'Створюємо структуру, концепцію та преміальний візуал.',
+  'proc.3.t':'Розробка','proc.3.d':'Розробляємо швидкий, адаптивний і SEO-готовий продукт.',
+  'proc.4.t':'Запуск і ріст','proc.4.d':'Запускаємо, налаштовуємо аналітику та підтримуємо ваше зростання.',
+  'price.label':'Ціни','price.title':'Прозорі <em>ціни</em>',
+  'price.lead':'Оберіть стартовий пакет — ми адаптуємо його під ваші цілі. Фінальна вартість залежить від обсягу робіт.',
+  'price.from':'від','price.popular':'Популярний','price.choose':'Обрати пакет',
+  'price.note':'Банери, відеомонтаж і рекламні кампанії доступні й окремо — запитайте розрахунок.',
+  'pr.1.n':'Start','pr.1.d':'Для швидкого старту та перевірки ідеї.','pr.1.f':'Односторінковий лендинг|Адаптивний дизайн|Форма заявки та месенджери|Базове SEO|Підключення домену',
+  'pr.2.n':'Business','pr.2.d':'Для компаній, яким потрібен повноцінний сайт.','pr.2.f':'До 7 сторінок|Індивідуальний UI/UX дизайн|Анімації та мікровзаємодії|SEO та аналітика|3 рекламні банери|Місяць підтримки',
+  'pr.3.n':'Premium','pr.3.d':'Для брендів, що хочуть максимальний ефект.','pr.3.f':'Розширена структура або магазин|3D та складні анімації|Мультимовність|Айдентика та бренд-кіт|Відео для соцмереж|3 місяці підтримки',
+  'about.label':'Про нас','about.title':'Дизайн — понад усе.<br><em>Увага до деталей.</em>',
+  'about.p1':'NEXORA — діджитал-агенція на перетині дизайну, технологій і маркетингу. Ми створюємо цифрові продукти, завдяки яким бренди виглядають так, як вони заслуговують.',
+  'about.p2':'Ми поєднуємо мінімалістичну естетику, сучасні технології та чітку стратегію — щоб кожен проєкт не лише вражав, а й працював.',
+  'val.1.t':'Преміальний дизайн','val.1.d':'Сучасна естетика, що вирізняє вас серед конкурентів.',
+  'val.2.t':'Швидкість','val.2.d':'Оптимізовані сайти, які миттєво завантажуються.',
+  'val.3.t':'Прозорість','val.3.d':'Чіткі етапи, терміни та комунікація на кожному кроці.',
+  'val.4.t':'Підтримка','val.4.d':'Залишаємося поруч і після запуску проєкту.',
+  'contact.label':'Контакти','contact.title':'Створимо щось <em>видатне</em>',
+  'contact.lead':'Розкажіть про свій проєкт — ми зв’яжемося з вами якнайшвидше з ідеями та оцінкою.',
+  'contact.write':'Написати',
+  'form.name':'Ваше ім’я','form.namePh':'Олександр Коваленко','form.email':'Email','form.phone':'Телефон або Telegram','form.optional':'(необов’язково)',
+  'form.service':'Послуга','form.servicePh':'Оберіть послугу','form.other':'Інше',
+  'form.budget':'Бюджет','form.budgetPh':'Оберіть бюджет','form.b1':'До $500','form.b2':'$500 – $1 500','form.b3':'$1 500 – $3 000','form.b4':'Понад $3 000','form.b5':'Ще не визначився',
+  'form.msg':'Про ваш проєкт','form.msgPh':'Цілі, терміни, посилання на референси…',
+  'form.consent':'Я погоджуюся на обробку моїх персональних даних для отримання відповіді.',
+  'form.send':'Надіслати повідомлення',
+  'form.ok':'Дякуємо! Ваше повідомлення надіслано. Ми зв’яжемося з вами найближчим часом.',
+  'form.err':'Не вдалося надіслати повідомлення. Спробуйте ще раз або напишіть нам у месенджер.',
+  'form.choose':'Повідомлення готове. Оберіть, як його надіслати:',
+  'form.copied':'Текст повідомлення скопійовано — вставте його в чат.',
+  'err.required':'Це поле обов’язкове','err.email':'Введіть коректний email','err.short':'Повідомлення занадто коротке (мінімум 10 символів)','err.consent':'Будь ласка, підтвердьте згоду',
+  'footer.tag':'Преміальна діджитал-агенція. Сайти, креативи, відео та реклама для амбітних брендів.','footer.nav':'Навігація','footer.social':'Соцмережі','footer.rights':'Усі права захищено.','footer.top':'Нагору',
+  "hero.cta1":"Замовити проєкт",
+  "hero.cta3":"Зв’язатися з нами",
+  "hero.cta2":"Дивитись роботи",
+  "reply":"Відповідаємо протягом {n} год у робочий час",
+  "aria.robot":"Анімований 3D-робот — талісман NEXORA",
+  "aria.order":"Замовити",
+  "svc.order":"Замовити",
+  "svc.prices":"Ціни",
+  "work.case":"Кейс",
+  "work.all":"Усі кейси",
+  "work.alt":"Концепт сайту {name} на ноутбуці та смартфоні",
+  "modal.case":"Читати повний кейс",
+  "rev.label":"Відгуки",
+  "rev.title":"Що кажуть <em>клієнти</em>",
+  "rev.lead":"Ми публікуємо лише справжні відгуки реальних клієнтів — з їхнього дозволу.",
+  "rev.emptyT":"Перші відгуки клієнтів уже в дорозі",
+  "rev.emptyD":"Ми ніколи не вигадуємо відгуків. Станьте одним із наших перших клієнтів — і поділіться враженнями.",
+  "rev.cta":"Почати проєкт",
+  "rev.all":"Усі відгуки",
+  "rev.source":"Джерело",
+  "rev.rated":"Оцінка {n} з 5",
+  "faq.label":"FAQ",
+  "faq.title":"Часті <em>запитання</em>",
+  "faq.lead":"Коротко про вартість, терміни та роботу з нами.",
+  "faq.1.q":"Скільки коштує сайт?",
+  "faq.1.a":"Наші пакети починаються від цін, указаних у розділі «Ціни». Фінальна вартість залежить від кількості сторінок, функцій і контенту — після короткого брифу ми надсилаємо фіксовану пропозицію ще до початку робіт.",
+  "faq.2.q":"Скільки часу займає розробка?",
+  "faq.2.a":"Залежить від обсягу. Односторінковий лендинг — найшвидший варіант, багатосторінкові сайти й магазини потребують більше часу. Конкретний графік з етапами ми погоджуємо до старту.",
+  "faq.3.q":"Що потрібно від мене, щоб почати?",
+  "faq.3.a":"Короткий опис бізнесу та цілей, логотип і фірмові матеріали (якщо є) та приклади сайтів, які вам подобаються. Немає текстів чи фото? Допоможемо з копірайтингом і візуалом.",
+  "faq.4.q":"Чи буде сайт працювати на телефонах і знаходитися в Google?",
+  "faq.4.a":"Так. Кожен наш сайт повністю адаптивний і містить базове SEO: заголовки сторінок, мета-описи, структуровані дані та швидке завантаження. Розширене SEO — окрема послуга.",
+  "faq.5.q":"Чи підтримуєте ви сайт після запуску?",
+  "faq.5.a":"Так. Пакети Business і Premium включають 1 і 3 місяці підтримки. Після цього ми пропонуємо постійну підтримку та оновлення за запитом.",
+  "faq.more":"Не знайшли відповіді?",
+  "faq.ask":"Поставити запитання",
+  "loc.label":"Локація",
+  "loc.title":"Як нас <em>знайти</em>",
+  "loc.lead":"Зустріньмося особисто або зв’яжіться з нами онлайн.",
+  "loc.address":"Адреса",
+  "loc.hours":"Графік роботи",
+  "loc.contacts":"Контакти",
+  "loc.dir":"Прокласти маршрут",
+  "loc.load":"Показати карту",
+  "loc.consent":"Карту надає Google Maps. Під час завантаження дані передаються Google.",
+  "loc.mapTitle":"Карта: розташування NEXORA",
+  "setup.address":"Налаштування: додайте адресу в assets/config.js → address",
+  "setup.reviews":"Налаштування: додайте справжні відгуки в assets/config.js → reviews",
+  "form.consentHtml":"Я погоджуюся на обробку моїх персональних даних відповідно до <a href=\"privacy.html\">політики конфіденційності</a>.",
+  "footer.more":"Більше",
+  "footer.cases":"Кейси",
+  "footer.faq":"FAQ",
+  "footer.privacy":"Політика конфіденційності",
+  "footer.cookies":"Налаштування cookie",
+  "mcta.order":"Замовити проєкт",
+  "mcta.msg":"Написати"
+},
+en: {
+  'meta.title':'NEXORA — Premium Digital Agency',
+  'meta.desc':'NEXORA is a premium digital agency: website development, UI/UX design, advertising banners, video editing, social media advertising and SEO.',
+  'lang.label':'Language','nav.menu':'Menu',
+  'nav.services':'Services','nav.work':'Work','nav.process':'Process','nav.pricing':'Pricing','nav.about':'About','nav.contact':'Contact','nav.cta':'Start a project',
+  'hero.eyebrow':'Next-generation digital agency',
+  'hero.l1':'We build','hero.l2':'digital','hero.l3':'future.',
+  'hero.sub':'Websites, ad creatives, video and social media campaigns for brands that want to look premium and grow faster.',
+  'hero.cta1':'Start a project','hero.cta2':'View work','hero.scroll':'Scroll',
+  'hero.tag1':'Creative tech','hero.tag2':'Online presence',
+  'mq.1':'Web development','mq.2':'UI/UX design','mq.3':'Ad banners','mq.4':'Video editing','mq.5':'Social media ads','mq.6':'SEO & analytics',
+  'svc.label':'Services','svc.title':'What we <em>do</em>',
+  'svc.lead':'Full-cycle digital production — from the first idea to a launched product and a campaign that brings clients.',
+  'svc.1.t':'Website development','svc.1.d':'Fast, adaptive websites and landing pages built on modern technology — from concept to launch.','svc.1.g':'Landing pages|Corporate|E-commerce',
+  'svc.2.t':'UI/UX design','svc.2.d':'Interfaces that look premium and turn visitors into customers.','svc.2.g':'Prototypes|Design systems|Mobile',
+  'svc.3.t':'Advertising banners','svc.3.d':'Static and animated creatives for ads, social media and display networks.','svc.3.g':'Static|Animated|Display',
+  'svc.4.t':'Video editing','svc.4.d':'Dynamic edits for Reels, TikTok, YouTube and ad campaigns — with motion graphics and color grading.','svc.4.g':'Reels|Motion|Color',
+  'svc.5.t':'Social media advertising','svc.5.d':'Strategy, targeting and creatives for Meta and TikTok, with transparent reporting.','svc.5.g':'Meta Ads|TikTok Ads|Reporting',
+  'svc.6.t':'SEO & analytics','svc.6.d':'Technical SEO, speed optimization and analytics setup so people can find you.','svc.6.g':'SEO|GA4|Speed',
+  'svc.cta':'Not sure what you need? We’ll help you choose the right solution.','svc.ctaBtn':'Get a free consultation',
+  'work.label':'Portfolio','work.title':'Selected <em>concepts</em>',
+  'work.lead':'Six demo projects that show our design approach across different industries.',
+  'work.badge':'Concept','work.view':'View project',
+  'work.note':'All projects shown are demo concepts created to showcase our style and capabilities — not commissioned client work.',
+  'pf.1.c':'Luxury car dealership','pf.1.d':'A dark, cinematic website for a luxury car dealer: large imagery, smooth transitions and an easy-to-browse model catalog.','pf.1.f':'Car catalog with filters|Test-drive booking|360° gallery|Finance request form',
+  'pf.2.c':'Men’s fashion store','pf.2.d':'A minimalist online store for premium menswear, styled like a fashion magazine.','pf.2.f':'Catalog and cart|Lookbook collections|Size guide|Fast checkout',
+  'pf.3.c':'Real estate agency','pf.3.d':'A website for a luxury real estate agency focused on architecture, locations and trust.','pf.3.f':'Property search with filters|Location map|Property pages|Viewing requests',
+  'pf.4.c':'Luxury hotel','pf.4.d':'An atmospheric boutique hotel website: rooms, experiences and booking in a few clicks.','pf.4.f':'Room gallery|Booking module|Spa and restaurant|Multilingual',
+  'pf.5.c':'Restaurant','pf.5.d':'A warm, appetizing restaurant website with the menu, atmosphere and online table booking.','pf.5.f':'Interactive menu|Table reservations|Events and tastings|Maps integration',
+  'pf.6.c':'Digital business','pf.6.d':'A modern website for a SaaS or IT company: clear product story, pricing and calls to action.','pf.6.f':'Product showcase|Pricing plans|Integrations|Blog and FAQ',
+  'modal.about':'About the concept','modal.features':'What’s inside','modal.cta':'I want a similar website','modal.close':'Close',
+  'modal.note':'This is a concept project created by NEXORA to demonstrate style and capabilities. It is not commissioned client work.',
+  'proc.label':'Process','proc.title':'How we <em>work</em>','proc.lead':'A clear process with no surprises: you always know what stage your project is at.',
+  'proc.1.t':'Brief','proc.1.d':'We dive into your business, goals and audience.',
+  'proc.2.t':'Strategy & design','proc.2.d':'We create the structure, concept and a premium visual design.',
+  'proc.3.t':'Development','proc.3.d':'We build a fast, adaptive, SEO-ready product.',
+  'proc.4.t':'Launch & growth','proc.4.d':'We launch, set up analytics and support your growth.',
+  'price.label':'Pricing','price.title':'Transparent <em>pricing</em>',
+  'price.lead':'Choose a starting package — we’ll adapt it to your goals. The final cost depends on scope.',
+  'price.from':'from','price.popular':'Popular','price.choose':'Choose plan',
+  'price.note':'Banners, video editing and ad campaigns are also available as separate services — ask for a quote.',
+  'pr.1.n':'Start','pr.1.d':'For a fast start and testing an idea.','pr.1.f':'One-page landing|Adaptive design|Contact form and messengers|Basic SEO|Domain connection',
+  'pr.2.n':'Business','pr.2.d':'For companies that need a complete website.','pr.2.f':'Up to 7 pages|Custom UI/UX design|Animations and micro-interactions|SEO and analytics|3 ad banners|1 month of support',
+  'pr.3.n':'Premium','pr.3.d':'For brands that want maximum impact.','pr.3.f':'Extended structure or online store|3D and advanced animations|Multilingual|Brand identity kit|Social media video|3 months of support',
+  'about.label':'About','about.title':'Design-first.<br><em>Detail-obsessed.</em>',
+  'about.p1':'NEXORA is a digital agency at the intersection of design, technology and marketing. We create digital products that make brands look the way they deserve.',
+  'about.p2':'We combine minimalist aesthetics, modern technology and clear strategy — so every project doesn’t just impress, it works.',
+  'val.1.t':'Premium design','val.1.d':'Modern aesthetics that set you apart from competitors.',
+  'val.2.t':'Speed','val.2.d':'Optimized websites that load instantly.',
+  'val.3.t':'Transparency','val.3.d':'Clear stages, timelines and communication at every step.',
+  'val.4.t':'Support','val.4.d':'We stay with you after launch, too.',
+  'contact.label':'Contact','contact.title':'Let’s build something <em>remarkable</em>',
+  'contact.lead':'Tell us about your project and we’ll get back to you as soon as possible with ideas and an estimate.',
+  'contact.write':'Message us',
+  'form.name':'Your name','form.namePh':'John Smith','form.email':'Email','form.phone':'Phone or Telegram','form.optional':'(optional)',
+  'form.service':'Service','form.servicePh':'Select a service','form.other':'Other',
+  'form.budget':'Budget','form.budgetPh':'Select a budget','form.b1':'Up to $500','form.b2':'$500 – $1,500','form.b3':'$1,500 – $3,000','form.b4':'$3,000+','form.b5':'Not sure yet',
+  'form.msg':'About your project','form.msgPh':'Goals, timeline, links to references…',
+  'form.consent':'I agree to the processing of my personal data to receive a reply.',
+  'form.send':'Send message',
+  'form.ok':'Thank you! Your message has been sent. We’ll be in touch soon.',
+  'form.err':'Your message couldn’t be sent. Please try again or contact us via messenger.',
+  'form.choose':'Your message is ready. Choose how to send it:',
+  'form.copied':'Message text copied — paste it into the chat.',
+  'err.required':'This field is required','err.email':'Enter a valid email','err.short':'Message is too short (min. 10 characters)','err.consent':'Please confirm your consent',
+  'footer.tag':'Premium digital agency. Websites, creatives, video and advertising for ambitious brands.','footer.nav':'Navigation','footer.social':'Social','footer.rights':'All rights reserved.','footer.top':'Back to top',
+  "hero.cta1":"Order a project",
+  "hero.cta3":"Contact us",
+  "hero.cta2":"View work",
+  "reply":"We reply within {n} hours during working hours",
+  "aria.robot":"Animated 3D robot — the NEXORA mascot",
+  "aria.order":"Order",
+  "svc.order":"Order",
+  "svc.prices":"Pricing",
+  "work.case":"Case study",
+  "work.all":"All case studies",
+  "work.alt":"Concept website for {name} shown on a laptop and a phone",
+  "modal.case":"Read the full case study",
+  "rev.label":"Reviews",
+  "rev.title":"What clients <em>say</em>",
+  "rev.lead":"We publish only genuine reviews from real clients — with their permission.",
+  "rev.emptyT":"Our first client reviews are on the way",
+  "rev.emptyD":"We never invent reviews. Become one of our first clients — and share your experience.",
+  "rev.cta":"Start a project",
+  "rev.all":"All reviews",
+  "rev.source":"Source",
+  "rev.rated":"Rated {n} out of 5",
+  "faq.label":"FAQ",
+  "faq.title":"Frequently asked <em>questions</em>",
+  "faq.lead":"The essentials about cost, timelines and working with us.",
+  "faq.1.q":"How much does a website cost?",
+  "faq.1.a":"Our packages start from the prices shown in the Pricing section. The final cost depends on the number of pages, features and content — after a short brief we send you a fixed quote before any work begins.",
+  "faq.2.q":"How long does it take to build a website?",
+  "faq.2.a":"It depends on the scope. A one-page landing is the fastest option; multi-page sites and online stores take longer. We agree on a concrete schedule with milestones before we start.",
+  "faq.3.q":"What do I need to provide to get started?",
+  "faq.3.a":"A short description of your business and goals, your logo and brand assets if you have them, and examples of websites you like. No texts or photos yet? We can help with copy and visuals.",
+  "faq.4.q":"Will my website work on phones and be found on Google?",
+  "faq.4.a":"Yes. Every website we build is fully responsive and includes basic SEO: page titles, meta descriptions, structured data and fast loading. Advanced SEO is available as a separate service.",
+  "faq.5.q":"Do you support the website after launch?",
+  "faq.5.a":"Yes. The Business and Premium packages include 1 and 3 months of support. After that we offer ongoing support and updates on request.",
+  "faq.more":"Didn’t find your answer?",
+  "faq.ask":"Ask a question",
+  "loc.label":"Location",
+  "loc.title":"How to <em>find us</em>",
+  "loc.lead":"Meet us in person or reach us online.",
+  "loc.address":"Address",
+  "loc.hours":"Working hours",
+  "loc.contacts":"Contacts",
+  "loc.dir":"Get directions",
+  "loc.load":"Show map",
+  "loc.consent":"The map is provided by Google Maps. Loading it transfers data to Google.",
+  "loc.mapTitle":"Map: NEXORA location",
+  "setup.address":"Setup: add your address in assets/config.js → address",
+  "setup.reviews":"Setup: add genuine reviews in assets/config.js → reviews",
+  "form.consentHtml":"I agree to the processing of my personal data as described in the <a href=\"privacy.html\">privacy policy</a>.",
+  "footer.more":"More",
+  "footer.cases":"Case studies",
+  "footer.faq":"FAQ",
+  "footer.privacy":"Privacy policy",
+  "footer.cookies":"Cookie settings",
+  "mcta.order":"Order a project",
+  "mcta.msg":"Message us"
+},
+de: {
+  'meta.title':'NEXORA — Premium-Digitalagentur',
+  'meta.desc':'NEXORA ist eine Premium-Digitalagentur: Webentwicklung, UI/UX-Design, Werbebanner, Videoschnitt, Social-Media-Werbung und SEO.',
+  'lang.label':'Sprache','nav.menu':'Menü',
+  'nav.services':'Leistungen','nav.work':'Projekte','nav.process':'Ablauf','nav.pricing':'Preise','nav.about':'Über uns','nav.contact':'Kontakt','nav.cta':'Projekt starten',
+  'hero.eyebrow':'Digitalagentur der nächsten Generation',
+  'hero.l1':'Wir bauen','hero.l2':'digitale','hero.l3':'Zukunft.',
+  'hero.sub':'Websites, Werbecreatives, Videos und Social-Media-Kampagnen für Marken, die premium auftreten und schneller wachsen wollen.',
+  'hero.cta1':'Projekt starten','hero.cta2':'Projekte ansehen','hero.scroll':'Scrollen',
+  'hero.tag1':'Kreative Technik','hero.tag2':'Online-Präsenz',
+  'mq.1':'Webentwicklung','mq.2':'UI/UX-Design','mq.3':'Werbebanner','mq.4':'Videoschnitt','mq.5':'Social-Media-Ads','mq.6':'SEO & Analytics',
+  'svc.label':'Leistungen','svc.title':'Was wir <em>tun</em>',
+  'svc.lead':'Digitale Produktion aus einer Hand — von der ersten Idee bis zum fertigen Produkt und einer Kampagne, die Kunden bringt.',
+  'svc.1.t':'Webentwicklung','svc.1.d':'Schnelle, responsive Websites und Landingpages mit modernster Technik — vom Konzept bis zum Launch.','svc.1.g':'Landingpages|Unternehmen|E-Commerce',
+  'svc.2.t':'UI/UX-Design','svc.2.d':'Interfaces, die hochwertig aussehen und Besucher zu Kunden machen.','svc.2.g':'Prototypen|Designsysteme|Mobile',
+  'svc.3.t':'Werbebanner','svc.3.d':'Statische und animierte Creatives für Anzeigen, Social Media und Displaynetzwerke.','svc.3.g':'Statisch|Animiert|Display',
+  'svc.4.t':'Videoschnitt','svc.4.d':'Dynamische Schnitte für Reels, TikTok, YouTube und Werbekampagnen — mit Motion Graphics und Color Grading.','svc.4.g':'Reels|Motion|Color',
+  'svc.5.t':'Social-Media-Werbung','svc.5.d':'Strategie, Targeting und Creatives für Meta und TikTok mit transparentem Reporting.','svc.5.g':'Meta Ads|TikTok Ads|Reporting',
+  'svc.6.t':'SEO & Analytics','svc.6.d':'Technisches SEO, Ladezeit-Optimierung und Analytics-Setup, damit man Sie findet.','svc.6.g':'SEO|GA4|Speed',
+  'svc.cta':'Nicht sicher, was Sie brauchen? Wir helfen Ihnen, die richtige Lösung zu finden.','svc.ctaBtn':'Kostenlose Beratung',
+  'work.label':'Portfolio','work.title':'Ausgewählte <em>Konzepte</em>',
+  'work.lead':'Sechs Demo-Projekte, die unseren Designansatz in verschiedenen Branchen zeigen.',
+  'work.badge':'Konzept','work.view':'Projekt ansehen',
+  'work.note':'Alle gezeigten Projekte sind Demo-Konzepte, die unseren Stil und unsere Möglichkeiten zeigen — keine Kundenaufträge.',
+  'pf.1.c':'Luxus-Autohaus','pf.1.d':'Eine dunkle, cineastische Website für einen Luxusauto-Händler: große Bilder, fließende Übergänge und ein übersichtlicher Modellkatalog.','pf.1.f':'Fahrzeugkatalog mit Filtern|Probefahrt-Buchung|360°-Galerie|Finanzierungsanfrage',
+  'pf.2.c':'Herrenmode-Shop','pf.2.d':'Ein minimalistischer Onlineshop für Premium-Herrenmode im Stil eines Modemagazins.','pf.2.f':'Katalog und Warenkorb|Lookbook-Kollektionen|Größenberater|Schneller Checkout',
+  'pf.3.c':'Immobilienagentur','pf.3.d':'Eine Website für eine Luxus-Immobilienagentur mit Fokus auf Architektur, Lage und Vertrauen.','pf.3.f':'Objektsuche mit Filtern|Standortkarte|Objektseiten|Besichtigungsanfragen',
+  'pf.4.c':'Luxushotel','pf.4.d':'Eine atmosphärische Boutique-Hotel-Website: Zimmer, Erlebnisse und Buchung mit wenigen Klicks.','pf.4.f':'Zimmergalerie|Buchungsmodul|Spa und Restaurant|Mehrsprachig',
+  'pf.5.c':'Restaurant','pf.5.d':'Eine warme, appetitliche Restaurant-Website mit Speisekarte, Atmosphäre und Online-Tischreservierung.','pf.5.f':'Interaktive Speisekarte|Tischreservierung|Events und Verkostungen|Karten-Integration',
+  'pf.6.c':'Digitales Business','pf.6.d':'Eine moderne Website für ein SaaS- oder IT-Unternehmen: klare Produktstory, Preise und Calls-to-Action.','pf.6.f':'Produktpräsentation|Preispläne|Integrationen|Blog und FAQ',
+  'modal.about':'Über das Konzept','modal.features':'Was drin ist','modal.cta':'Ich möchte eine ähnliche Website','modal.close':'Schließen',
+  'modal.note':'Dies ist ein Konzeptprojekt von NEXORA, das Stil und Möglichkeiten zeigt. Es ist kein Kundenauftrag.',
+  'proc.label':'Ablauf','proc.title':'So <em>arbeiten</em> wir','proc.lead':'Ein klarer Ablauf ohne Überraschungen: Sie wissen immer, in welcher Phase Ihr Projekt ist.',
+  'proc.1.t':'Briefing','proc.1.d':'Wir tauchen in Ihr Business, Ihre Ziele und Ihre Zielgruppe ein.',
+  'proc.2.t':'Strategie & Design','proc.2.d':'Wir entwickeln Struktur, Konzept und ein hochwertiges Design.',
+  'proc.3.t':'Entwicklung','proc.3.d':'Wir bauen ein schnelles, responsives und SEO-fähiges Produkt.',
+  'proc.4.t':'Launch & Wachstum','proc.4.d':'Wir starten, richten Analytics ein und begleiten Ihr Wachstum.',
+  'price.label':'Preise','price.title':'Transparente <em>Preise</em>',
+  'price.lead':'Wählen Sie ein Startpaket — wir passen es an Ihre Ziele an. Der Endpreis hängt vom Umfang ab.',
+  'price.from':'ab','price.popular':'Beliebt','price.choose':'Paket wählen',
+  'price.note':'Banner, Videoschnitt und Werbekampagnen gibt es auch als Einzelleistung — fragen Sie nach einem Angebot.',
+  'pr.1.n':'Start','pr.1.d':'Für einen schnellen Start und zum Testen einer Idee.','pr.1.f':'One-Page-Landingpage|Responsives Design|Kontaktformular und Messenger|Basis-SEO|Domain-Anbindung',
+  'pr.2.n':'Business','pr.2.d':'Für Unternehmen, die eine vollständige Website brauchen.','pr.2.f':'Bis zu 7 Seiten|Individuelles UI/UX-Design|Animationen und Micro-Interactions|SEO und Analytics|3 Werbebanner|1 Monat Support',
+  'pr.3.n':'Premium','pr.3.d':'Für Marken, die maximale Wirkung wollen.','pr.3.f':'Erweiterte Struktur oder Onlineshop|3D und aufwendige Animationen|Mehrsprachig|Brand-Identity-Kit|Social-Media-Video|3 Monate Support',
+  'about.label':'Über uns','about.title':'Design zuerst.<br><em>Liebe zum Detail.</em>',
+  'about.p1':'NEXORA ist eine Digitalagentur an der Schnittstelle von Design, Technologie und Marketing. Wir schaffen digitale Produkte, mit denen Marken so auftreten, wie sie es verdienen.',
+  'about.p2':'Wir verbinden minimalistische Ästhetik, moderne Technik und eine klare Strategie — damit jedes Projekt nicht nur beeindruckt, sondern auch funktioniert.',
+  'val.1.t':'Premium-Design','val.1.d':'Moderne Ästhetik, die Sie vom Wettbewerb abhebt.',
+  'val.2.t':'Geschwindigkeit','val.2.d':'Optimierte Websites, die sofort laden.',
+  'val.3.t':'Transparenz','val.3.d':'Klare Phasen, Fristen und Kommunikation bei jedem Schritt.',
+  'val.4.t':'Support','val.4.d':'Wir bleiben auch nach dem Launch an Ihrer Seite.',
+  'contact.label':'Kontakt','contact.title':'Lassen Sie uns etwas <em>Besonderes</em> bauen',
+  'contact.lead':'Erzählen Sie uns von Ihrem Projekt — wir melden uns so schnell wie möglich mit Ideen und einer Einschätzung.',
+  'contact.write':'Schreiben',
+  'form.name':'Ihr Name','form.namePh':'Max Mustermann','form.email':'E-Mail','form.phone':'Telefon oder Telegram','form.optional':'(optional)',
+  'form.service':'Leistung','form.servicePh':'Leistung wählen','form.other':'Sonstiges',
+  'form.budget':'Budget','form.budgetPh':'Budget wählen','form.b1':'Bis 500 $','form.b2':'500 – 1.500 $','form.b3':'1.500 – 3.000 $','form.b4':'Über 3.000 $','form.b5':'Noch unklar',
+  'form.msg':'Über Ihr Projekt','form.msgPh':'Ziele, Zeitrahmen, Links zu Referenzen…',
+  'form.consent':'Ich stimme der Verarbeitung meiner personenbezogenen Daten zur Beantwortung meiner Anfrage zu.',
+  'form.send':'Nachricht senden',
+  'form.ok':'Vielen Dank! Ihre Nachricht wurde gesendet. Wir melden uns in Kürze.',
+  'form.err':'Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie uns per Messenger.',
+  'form.choose':'Ihre Nachricht ist fertig. Wählen Sie, wie Sie sie senden möchten:',
+  'form.copied':'Nachricht kopiert — fügen Sie sie in den Chat ein.',
+  'err.required':'Dieses Feld ist erforderlich','err.email':'Bitte gültige E-Mail eingeben','err.short':'Nachricht zu kurz (mind. 10 Zeichen)','err.consent':'Bitte bestätigen Sie Ihre Zustimmung',
+  'footer.tag':'Premium-Digitalagentur. Websites, Creatives, Videos und Werbung für ambitionierte Marken.','footer.nav':'Navigation','footer.social':'Social Media','footer.rights':'Alle Rechte vorbehalten.','footer.top':'Nach oben',
+  "hero.cta1":"Projekt anfragen",
+  "hero.cta3":"Kontakt aufnehmen",
+  "hero.cta2":"Projekte ansehen",
+  "reply":"Wir antworten innerhalb von {n} Stunden während der Geschäftszeiten",
+  "aria.robot":"Animierter 3D-Roboter — das NEXORA-Maskottchen",
+  "aria.order":"Anfragen",
+  "svc.order":"Anfragen",
+  "svc.prices":"Preise",
+  "work.case":"Case Study",
+  "work.all":"Alle Case Studies",
+  "work.alt":"Konzept-Website für {name} auf Laptop und Smartphone",
+  "modal.case":"Ganze Case Study lesen",
+  "rev.label":"Bewertungen",
+  "rev.title":"Was Kunden <em>sagen</em>",
+  "rev.lead":"Wir veröffentlichen nur echte Bewertungen echter Kunden — mit deren Zustimmung.",
+  "rev.emptyT":"Die ersten Kundenbewertungen folgen bald",
+  "rev.emptyD":"Wir erfinden niemals Bewertungen. Werden Sie einer unserer ersten Kunden — und teilen Sie Ihre Erfahrung.",
+  "rev.cta":"Projekt starten",
+  "rev.all":"Alle Bewertungen",
+  "rev.source":"Quelle",
+  "rev.rated":"Bewertet mit {n} von 5",
+  "faq.label":"FAQ",
+  "faq.title":"Häufige <em>Fragen</em>",
+  "faq.lead":"Das Wichtigste zu Kosten, Zeitrahmen und Zusammenarbeit.",
+  "faq.1.q":"Was kostet eine Website?",
+  "faq.1.a":"Unsere Pakete beginnen bei den Preisen im Abschnitt „Preise“. Der Endpreis hängt von Seitenanzahl, Funktionen und Inhalten ab — nach einem kurzen Briefing erhalten Sie ein verbindliches Angebot, bevor die Arbeit beginnt.",
+  "faq.2.q":"Wie lange dauert die Erstellung einer Website?",
+  "faq.2.a":"Das hängt vom Umfang ab. Eine One-Page-Landingpage ist am schnellsten; mehrseitige Websites und Onlineshops brauchen länger. Einen konkreten Zeitplan mit Meilensteinen vereinbaren wir vor dem Start.",
+  "faq.3.q":"Was brauchen Sie von mir für den Start?",
+  "faq.3.a":"Eine kurze Beschreibung Ihres Unternehmens und Ihrer Ziele, Ihr Logo und Markenmaterialien (falls vorhanden) sowie Beispiele für Websites, die Ihnen gefallen. Noch keine Texte oder Fotos? Wir helfen bei Text und Bild.",
+  "faq.4.q":"Funktioniert meine Website auf Smartphones und wird sie bei Google gefunden?",
+  "faq.4.a":"Ja. Jede Website, die wir bauen, ist vollständig responsiv und enthält Basis-SEO: Seitentitel, Meta-Beschreibungen, strukturierte Daten und schnelle Ladezeiten. Erweitertes SEO bieten wir als separate Leistung an.",
+  "faq.5.q":"Betreuen Sie die Website nach dem Launch?",
+  "faq.5.a":"Ja. Die Pakete Business und Premium enthalten 1 bzw. 3 Monate Support. Danach bieten wir auf Wunsch laufende Betreuung und Updates an.",
+  "faq.more":"Keine Antwort gefunden?",
+  "faq.ask":"Frage stellen",
+  "loc.label":"Standort",
+  "loc.title":"So <em>finden</em> Sie uns",
+  "loc.lead":"Treffen Sie uns persönlich oder kontaktieren Sie uns online.",
+  "loc.address":"Adresse",
+  "loc.hours":"Geschäftszeiten",
+  "loc.contacts":"Kontakt",
+  "loc.dir":"Route planen",
+  "loc.load":"Karte anzeigen",
+  "loc.consent":"Die Karte wird von Google Maps bereitgestellt. Beim Laden werden Daten an Google übertragen.",
+  "loc.mapTitle":"Karte: Standort von NEXORA",
+  "setup.address":"Einrichtung: Adresse in assets/config.js → address eintragen",
+  "setup.reviews":"Einrichtung: echte Bewertungen in assets/config.js → reviews eintragen",
+  "form.consentHtml":"Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der <a href=\"privacy.html\">Datenschutzerklärung</a> zu.",
+  "footer.more":"Mehr",
+  "footer.cases":"Case Studies",
+  "footer.faq":"FAQ",
+  "footer.privacy":"Datenschutz",
+  "footer.cookies":"Cookie-Einstellungen",
+  "mcta.order":"Projekt anfragen",
+  "mcta.msg":"Schreiben"
+}
+};
+const LANGS = [['uk','UA'],['en','EN'],['de','DE']];
+const LOCALE = { uk:'uk-UA', en:'en-US', de:'de-DE' };
+
+/* =====================================================================
+   3) DATA
+   ===================================================================== */
+const ICONS = {
+  web:'<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/>',
+  ui:'<path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 17.5l9 5 9-5" opacity=".5"/>',
+  banner:'<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/>',
+  video:'<rect x="2" y="5" width="15" height="14" rx="2"/><path d="M17 10l5-3v10l-5-3z"/>',
+  social:'<path d="M3 11l18-8-8 18-2-8-8-2z"/>',
+  seo:'<path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/>',
+  check:'<path d="M5 12l5 5 9-10"/>',
+  arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',
+  tg:'<path d="M21.5 4.2L2.9 11.4c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.8-.8l3.3-15.4c.3-1.3-.5-1.9-1.4-1.4zM8.6 14.2l9.6-6.1c.5-.3.9-.1.5.2l-8.2 7.4-.3 3.4-1.6-4.9z" fill="currentColor" stroke="none"/>',
+  wa:'<path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-1.4-.7-2.4-1.3-3.3-2.9-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4.1 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.4z" fill="currentColor" stroke="none"/>',
+  mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+  ig:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/>',
+  in:'<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/>',
+  be:'<path d="M3 7h5a2.5 2.5 0 0 1 0 5H3zM3 12h5.5a2.5 2.5 0 0 1 0 5H3zM14 7h5M13.5 14h7a3.5 3.5 0 1 0-1 2.5"/>',
+  design:'<path d="M12 3l2.6 5.6L20 9.3l-4 4.1 1 5.6-5-2.7-5 2.7 1-5.6-4-4.1 5.4-.7z"/>',
+  bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+  eye:'<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>'
+};
+const svg = (name, extra='') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" ${extra}>${ICONS[name]}</svg>`;
+
+const SERVICES = [
+  {id:'web',icon:'web'},{id:'uiux',icon:'ui'},{id:'banners',icon:'banner'},
+  {id:'video',icon:'video'},{id:'social',icon:'social'},{id:'seo',icon:'seo'}
+];
+
+const { PROJECTS, deviceHTML } = window.NEXORA_MOCKUPS;
+
+const PLANS = [ {key:'start',i:1}, {key:'business',i:2,featured:true}, {key:'premium',i:3} ];
+const VALUES = ['design','bolt','eye','shield'];
+
+/* =====================================================================
+   4) HELPERS
+   ===================================================================== */
+const $ = (s, el=document) => el.querySelector(s);
+const $$ = (s, el=document) => [...el.querySelectorAll(s)];
+const store = { get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}} };
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer = matchMedia('(hover:hover) and (pointer:fine)').matches;
+let lang = 'en';
+const t = (k) => (I18N[lang] && I18N[lang][k]) ?? I18N.en[k] ?? k;
+const esc = (s) => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* =====================================================================
+   5) RENDER DYNAMIC SECTIONS (text is filled in by applyLang)
+   ===================================================================== */
+function renderMarquee(){
+  const html = [1,2,3,4,5,6].map(i => `<span data-i18n="mq.${i}"></span><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4z"/></svg>`).join('');
+  $('#mq').innerHTML = html; $('#mq2').innerHTML = html;
+}
+
+function renderServices(){
+  $('#servicesGrid').innerHTML = SERVICES.map((s,i) => `
+    <article class="svc gc rv" style="--d:${(i%3)*.08}s">
+      <div class="svc-top"><div class="svc-icon">${svg(s.icon)}</div><span class="svc-num">0${i+1}</span></div>
+      <h3 data-i18n="svc.${i+1}.t"></h3>
+      <p data-i18n="svc.${i+1}.d"></p>
+      <div class="tags" data-tags="svc.${i+1}.g"></div>
+      <div class="svc-links"><a href="#contact" data-order="${s.id}"><span data-i18n="svc.order"></span>${svg('arrow')}</a><a href="#pricing"><span data-i18n="svc.prices"></span>${svg('arrow')}</a></div>
+    </article>`).join('');
+}
+
+function renderWork(){
+  $('#workGrid').innerHTML = PROJECTS.map((p,i) => `
+    <article class="work gc rv" style="--a:${p.accent};--d:${(i%3)*.08}s" data-idx="${i}">
+      <figure class="work-fig">
+        <div class="work-media" role="img" data-alt="${esc(p.name)}"></div>
+        <figcaption class="work-body">
+          <div class="work-meta"><span data-i18n="pf.${i+1}.c"></span><span class="badge" data-i18n="work.badge"></span></div>
+          <h3>${esc(p.name)}</h3>
+          <div class="work-foot"><a class="case-link" href="case-studies/${p.slug}.html" data-i18n="work.case"></a>
+            <button type="button" class="view-btn"><span data-i18n="work.view"></span>${svg('arrow')}</button></div>
+        </figcaption>
+      </figure>
+    </article>`).join('');
+  $$('#workGrid .work-media').forEach((m,i) => m.insertAdjacentHTML('beforeend', deviceHTML(PROJECTS[i]).replace('class="stage"','class="stage" aria-hidden="true"')));
+}
+
+function renderProcess(){
+  $('#processGrid').innerHTML = [1,2,3,4].map((n,i) => `
+    <div class="step rv" style="--d:${i*.12}s"><div class="step-ic">${svg(STEP_ICONS[i])}</div><div class="step-n">0${n}</div><h3 data-i18n="proc.${n}.t"></h3><p data-i18n="proc.${n}.d"></p></div>`).join('');
+}
+
+function renderPricing(){
+  $('#pricingGrid').innerHTML = PLANS.map((p,i) => `
+    <article class="plan gc rv${p.featured?' featured':''}" style="--d:${i*.1}s">
+      ${p.featured?'<span class="popular" data-i18n="price.popular"></span>':''}
+      <h3 data-i18n="pr.${p.i}.n"></h3>
+      <p class="desc" data-i18n="pr.${p.i}.d"></p>
+      <div class="price"><small data-i18n="price.from"></small><strong data-price="${p.key}"></strong></div>
+      <ul data-list="pr.${p.i}.f"></ul>
+      <a href="#contact" class="btn ${p.featured?'btn-primary':'btn-ghost'} btn-block" data-plan="${p.key}"><span data-i18n="price.choose"></span>${svg('arrow')}</a>
+    </article>`).join('');
+}
+
+const STEP_ICONS = ['eye','design','web','bolt'];
+function renderOrbit(){
+  const chips = [[1,0,'r2'],[2,120,'r2'],[3,240,'r2'],[4,60,'r3'],[5,180,'r3'],[6,300,'r3']];
+  const layer = (ring, rev) => `<div class="spin${rev?' rev':''}">` + chips.filter(c => c[2] === ring).map(([k,a]) =>
+    `<div class="chip" style="--a:${a}deg;--r:${ring==='r2'?'26cqw':'38cqw'}"><span data-i18n="mq.${k}"></span></div>`).join('') + '</div>';
+  $('#orbit').innerHTML = '<i class="ring r1"></i><i class="ring r2"></i><i class="ring r3"></i>' + layer('r2') + layer('r3', true) +
+    '<div class="core"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 20V4h3l8 9.5V4h3v16h-3L8 10.5V20z"/></svg></div>';
+}
+function splitHeadings(){
+  $$('.h2').forEach(h => { let i = 0;
+    const walk = n => [...n.childNodes].forEach(c => {
+      if (c.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(pt => { if (!pt) return;
+          if (/^\s+$/.test(pt)) frag.appendChild(document.createTextNode(pt));
+          else { const w = document.createElement('span'), x = document.createElement('span'); w.className = 'w'; x.style.setProperty('--i', i++); x.textContent = pt; w.appendChild(x); frag.appendChild(w); } });
+        c.replaceWith(frag);
+      } else if (c.nodeType === 1 && c.tagName !== 'BR' && !c.classList.contains('w')) walk(c);
+    });
+    walk(h); });
+}
+function renderValues(){
+  $('#valuesGrid').innerHTML = VALUES.map((ic,i) => `
+    <div class="value">${svg(ic)}<h3 data-i18n="val.${i+1}.t"></h3><p data-i18n="val.${i+1}.d"></p></div>`).join('');
+}
+
+function renderContacts(){
+  const links = [];
+  if (CONFIG.telegram) links.push({k:'tg',label:'Telegram',val:'@'+CONFIG.telegram,href:`https://t.me/${CONFIG.telegram}`});
+  if (CONFIG.whatsapp) links.push({k:'wa',label:'WhatsApp',val:'+'+CONFIG.whatsapp,href:`https://wa.me/${CONFIG.whatsapp}`});
+  if (CONFIG.email) links.push({k:'mail',label:'Email',val:CONFIG.email,href:`mailto:${CONFIG.email}`});
+  $('#direct').innerHTML = links.map(l => `
+    <a class="gc" href="${l.href}" target="${l.k==='mail'?'_self':'_blank'}" rel="noopener">
+      <span class="ic">${svg(l.k)}</span><span><small>${l.label}</small><b>${esc(l.val)}</b></span>${svg('arrow','class="arr"')}
+    </a>`).join('');
+
+  const soc = [];
+  if (CONFIG.instagram) soc.push(['ig','Instagram',CONFIG.instagram]);
+  if (CONFIG.telegram) soc.push(['tg','Telegram',`https://t.me/${CONFIG.telegram}`]);
+  if (CONFIG.whatsapp) soc.push(['wa','WhatsApp',`https://wa.me/${CONFIG.whatsapp}`]);
+  if (CONFIG.linkedin) soc.push(['in','LinkedIn',CONFIG.linkedin]);
+  if (CONFIG.behance) soc.push(['be','Behance',CONFIG.behance]);
+  $('#socials').innerHTML = soc.map(([k,l,h]) => `<a href="${h}" target="_blank" rel="noopener" aria-label="${l}">${svg(k)}</a>`).join('');
+  if (!soc.length) $('#socials').parentElement.hidden = true;
+
+  const fl = [];
+  if (CONFIG.telegram) fl.push(`<a href="https://t.me/${CONFIG.telegram}" target="_blank" rel="noopener" aria-label="Telegram">${svg('tg')}</a>`);
+  if (CONFIG.whatsapp) fl.push(`<a href="https://wa.me/${CONFIG.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp">${svg('wa')}</a>`);
+  $('#float').innerHTML = fl.join('');
+  if (!fl.length) $('#float').hidden = true;
+}
+
+function renderLangSwitches(){
+  $$('.lang-switch').forEach(el => {
+    el.innerHTML = '<span class="pill"></span>' + LANGS.map(([code,label]) => `<button type="button" data-lang="${code}" aria-pressed="false">${label}</button>`).join('');
+    el.addEventListener('click', e => { const b = e.target.closest('button'); if (b) setLang(b.dataset.lang); });
+  });
+}
+function movePills(){
+  $$('.lang-switch').forEach(el => {
+    const active = $(`button[data-lang="${lang}"]`, el), pill = $('.pill', el);
+    if (!active || !pill || !active.offsetWidth) return;
+    pill.style.width = active.offsetWidth + 'px';
+    pill.style.transform = `translateX(${active.offsetLeft - 4}px)`;
+  });
+}
+
+/* =====================================================================
+   6) LANGUAGE
+   ===================================================================== */
+function applyLang(){
+  document.documentElement.lang = lang;
+  document.title = t('meta.title');
+  $('meta[name="description"]').setAttribute('content', t('meta.desc'));
+  $$('[data-i18n]').forEach(el => el.textContent = t(el.dataset.i18n));
+  $$('[data-i18n-html]').forEach(el => el.innerHTML = t(el.dataset.i18nHtml));
+  splitHeadings();
+  $$('[data-i18n-ph]').forEach(el => el.placeholder = t(el.dataset.i18nPh));
+  $$('[data-i18n-aria]').forEach(el => el.setAttribute('aria-label', t(el.dataset.i18nAria)));
+  $$('[data-tags]').forEach(el => el.innerHTML = t(el.dataset.tags).split('|').map(x => `<span>${esc(x)}</span>`).join(''));
+  $$('[data-list]').forEach(el => el.innerHTML = t(el.dataset.list).split('|').map(x => `<li>${svg('check')}<span>${esc(x)}</span></li>`).join(''));
+  $$('[data-price]').forEach(el => el.textContent = CONFIG.currency + CONFIG.prices[el.dataset.price].toLocaleString(LOCALE[lang]));
+  $$('.lang-switch button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+  fillSelects();
+  langExtras();
+  movePills();
+  if (modal.open && currentProject != null) fillModal(currentProject);
+}
+function setLang(l){
+  if (!I18N[l]) return;
+  lang = l; store.set('nexora-lang', l);
+  const u = new URL(location.href); u.searchParams.set('lang', l); history.replaceState(null, '', u);
+  applyLang();
+  document.dispatchEvent(new CustomEvent('nexora:lang', { detail:l }));
+}
+function detectLang(){
+  const q = new URLSearchParams(location.search).get('lang');
+  if (q && I18N[q]) return q;
+  const saved = store.get('nexora-lang'); if (saved && I18N[saved]) return saved;
+  for (const l of (navigator.languages || [navigator.language || 'en'])) {
+    const c = l.slice(0,2).toLowerCase();
+    if (c === 'uk' || c === 'ru') return 'uk';
+    if (c === 'de') return 'de';
+    if (c === 'en') return 'en';
+  }
+  return 'en';
+}
+
+/* =====================================================================
+   7) CONTACT FORM
+   ===================================================================== */
+const form = $('#contactForm');
+function fillSelects(){
+  const sSel = $('#f-service'), bSel = $('#f-budget');
+  const sv = sSel.value, bv = bSel.value;
+  sSel.innerHTML = `<option value="" disabled ${sv?'':'selected'}>${esc(t('form.servicePh'))}</option>` +
+    SERVICES.map((s,i) => `<option value="${s.id}">${esc(t(`svc.${i+1}.t`))}</option>`).join('') +
+    `<option value="other">${esc(t('form.other'))}</option>`;
+  bSel.innerHTML = `<option value="" ${bv?'':'selected'}>${esc(t('form.budgetPh'))}</option>` +
+    [1,2,3,4,5].map(i => `<option value="b${i}">${esc(t('form.b'+i))}</option>`).join('');
+  if (sv) sSel.value = sv; if (bv) bSel.value = bv;
+}
+function setErr(field, key){
+  const wrap = field.closest('.field') || field.closest('.check');
+  wrap.classList.toggle('invalid', !!key);
+  const e = $('.err', wrap); if (e) e.textContent = key ? t(key) : '';
+}
+function validate(){
+  let ok = true, first = null;
+  const f = form.elements;
+  const checks = [
+    [f.name, !f.name.value.trim() ? 'err.required' : null],
+    [f.email, !f.email.value.trim() ? 'err.required' : (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.email.value.trim()) ? 'err.email' : null)],
+    [f.service, !f.service.value ? 'err.required' : null],
+    [f.message, !f.message.value.trim() ? 'err.required' : (f.message.value.trim().length < 10 ? 'err.short' : null)],
+  ];
+  checks.forEach(([el, k]) => { setErr(el, k); if (k) { ok = false; first ||= el; } });
+  const consentOk = f.consent.checked;
+  $('#consentWrap').classList.toggle('invalid', !consentOk);
+  if (!consentOk) { ok = false; first ||= f.consent; }
+  if (first) first.focus({preventScroll:false});
+  if (!consentOk) showStatus('bad', t('err.consent'));
+  return ok;
+}
+function showStatus(type, msg){ const s = $('#formStatus'); s.className = 'form-status ' + (type||''); s.textContent = msg || ''; }
+function payload(){
+  const f = form.elements;
+  const svcLabel = f.service.selectedOptions[0]?.textContent || '';
+  const budLabel = f.budget.value ? f.budget.selectedOptions[0].textContent : '—';
+  return { name:f.name.value.trim(), email:f.email.value.trim(), phone:f.phone.value.trim() || '—', service:svcLabel, budget:budLabel, message:f.message.value.trim(), language:lang.toUpperCase() };
+}
+function asText(d){
+  return `NEXORA — New request\n\nName: ${d.name}\nEmail: ${d.email}\nPhone/Telegram: ${d.phone}\nService: ${d.service}\nBudget: ${d.budget}\n\n${d.message}`;
+}
+function showFallback(d){
+  const text = asText(d), box = $('#fallbackSend'), btns = [];
+  if (CONFIG.whatsapp) btns.push(`<a class="btn btn-ghost btn-sm" target="_blank" rel="noopener" href="https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}">${svg('wa')} WhatsApp</a>`);
+  if (CONFIG.telegram) btns.push(`<a class="btn btn-ghost btn-sm" target="_blank" rel="noopener" data-copy href="https://t.me/${CONFIG.telegram}">${svg('tg')} Telegram</a>`);
+  if (CONFIG.email) btns.push(`<a class="btn btn-ghost btn-sm" href="mailto:${CONFIG.email}?subject=${encodeURIComponent('NEXORA — '+d.service)}&body=${encodeURIComponent(text)}">${svg('mail')} Email</a>`);
+  if (!btns.length) { showStatus('bad', t('form.err')); console.warn('NEXORA: set CONFIG.email / telegram / whatsapp so the form can deliver messages.'); return; }
+  showStatus('', ''); $('#formStatus').className = 'form-status ok'; $('#formStatus').textContent = t('form.choose');
+  box.innerHTML = btns.join(''); box.classList.add('on');
+  $$('[data-copy]', box).forEach(a => a.addEventListener('click', () => { navigator.clipboard?.writeText(text).then(() => showStatus('ok', t('form.copied'))).catch(()=>{}); }));
+}
+form.addEventListener('input', e => { const el = e.target; if (el.closest('.field.invalid')) setErr(el, null); if (el.name === 'consent') $('#consentWrap').classList.remove('invalid'); });
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  showStatus('', ''); $('#fallbackSend').classList.remove('on');
+  if (form.elements._honey.value) return;               // bot trap
+  if (!validate()) return;
+  const d = payload();
+  const endpoint = CONFIG.formEndpoint || (CONFIG.email ? `https://formsubmit.co/ajax/${CONFIG.email}` : '');
+  if (!endpoint) { showFallback(d); return; }
+  const btn = $('#sendBtn'); btn.disabled = true; btn.classList.add('sending');
+  try {
+    const res = await fetch(endpoint, { method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify({ ...d, _subject:`NEXORA — ${d.service} — ${d.name}`, _template:'table', _replyto:d.email }) });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    try { sessionStorage.setItem('nexora-lead', JSON.stringify({ service:d.service, ts:Date.now() })); } catch(e) {}
+    showStatus('ok', t('form.ok')); form.reset(); fillSelects();
+    location.href = 'thank-you.html?lang=' + lang;
+  } catch (err) {
+    console.warn('NEXORA form:', err); showFallback(d);
+    if (!$('#fallbackSend').classList.contains('on')) showStatus('bad', t('form.err'));
+  } finally { btn.disabled = false; btn.classList.remove('sending'); }
+});
+// "Choose plan" buttons preselect the website service and budget
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-plan]'); if (!b) return;
+  $('#f-service').value = 'web';
+  $('#f-budget').value = {start:'b1',business:'b2',premium:'b3'}[b.dataset.plan] || '';
+  if (!form.elements.message.value) form.elements.message.value = `${t('price.choose')}: ${b.closest('.plan').querySelector('h3').textContent}\n`;
+});
+
+/* =====================================================================
+   8) PORTFOLIO MODAL
+   ===================================================================== */
+const modal = $('#modal'); let currentProject = null;
+function fillModal(i){
+  const p = PROJECTS[i]; currentProject = i;
+  modal.style.setProperty('--a', p.accent);
+  $('#modalMedia').innerHTML = deviceHTML(p);
+  $('#modalTitle').textContent = p.name;
+  $('#modalCat').textContent = t(`pf.${i+1}.c`);
+  $('#modalDesc').textContent = t(`pf.${i+1}.d`);
+  $('#modalFeat').innerHTML = t(`pf.${i+1}.f`).split('|').map(x => `<li>${esc(x)}</li>`).join('');
+  $('#modalCase').href = `case-studies/${p.slug}.html`;
+  $('#modalMedia').setAttribute('role','img'); $('#modalMedia').setAttribute('aria-label', t('work.alt').replace('{name}', p.name));
+}
+function openModal(i){
+  fillModal(i);
+  if (typeof modal.showModal === 'function') modal.showModal(); else modal.setAttribute('open','');
+  document.body.classList.add('lock');
+}
+function closeModal(){ modal.close ? modal.close() : modal.removeAttribute('open'); }
+modal.addEventListener('close', () => document.body.classList.remove('lock'));
+$('#modalClose').addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+$('#modalCta').addEventListener('click', () => {
+  const p = PROJECTS[currentProject]; closeModal();
+  $('#f-service').value = 'web';
+  if (!form.elements.message.value) form.elements.message.value = `${t('modal.cta')}: ${p.name} (${t(`pf.${currentProject+1}.c`)})\n`;
+});
+document.addEventListener('click', e => { const c = e.target.closest('.work'); if (c && !e.target.closest('a')) openModal(+c.dataset.idx); });
+
+
+/* =====================================================================
+   9) NAV, MENU, SCROLL EFFECTS
+   ===================================================================== */
+const header = $('#header'), burger = $('#burger'), menu = $('#menu');
+function toggleMenu(force){
+  const open = force ?? !menu.classList.contains('open');
+  menu.classList.toggle('open', open); burger.setAttribute('aria-expanded', open); menu.setAttribute('aria-hidden', !open);
+  document.body.classList.toggle('lock', open);
+  if (open) requestAnimationFrame(movePills);
+}
+burger.addEventListener('click', () => toggleMenu());
+$$('#menu a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('open')) toggleMenu(false); });
+
+let lastY = 0, scrollTick = false;
+const rootStyle = document.documentElement.style, heroEl = $('#home');
+function scrollFX(){
+  scrollTick = false;
+  const y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
+  rootStyle.setProperty('--p', max > 0 ? (y / max).toFixed(4) : 0);
+  rootStyle.setProperty('--sy', Math.round(y));
+  if (!reduced) heroEl.style.setProperty('--hp', Math.min(1, y / innerHeight).toFixed(3));
+}
+function onScroll(){
+  const y = scrollY;
+  header.classList.toggle('scrolled', y > 30);
+  header.classList.toggle('hide', y > lastY && y > 600 && !menu.classList.contains('open'));
+  $('#float').classList.toggle('show', y > innerHeight * .6);
+  lastY = y;
+  if (!scrollTick) { scrollTick = true; requestAnimationFrame(scrollFX); }
+}
+addEventListener('scroll', onScroll, {passive:true});
+
+// active nav link
+const navLinks = $$('.nav-links a');
+const secObs = new IntersectionObserver(entries => entries.forEach(en => {
+  if (en.isIntersecting) navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id));
+}), { rootMargin:'-45% 0px -50% 0px' });
+$$('main section[id]').forEach(s => secObs.observe(s));
+
+// reveal on scroll
+function initReveal(){
+  if (reduced) { $$('.rv').forEach(el => el.classList.add('in')); return; }
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold:.12, rootMargin:'0px 0px -6% 0px' });
+  $$('.rv').forEach(el => io.observe(el));
+}
+
+// custom cursor + magnetic buttons + spotlight + tilt (desktop only)
+function initPointerFX(){
+  if (!finePointer || reduced) return;
+  const c = $('#cursor'), d = $('#cursorDot');
+  let x = innerWidth/2, y = innerHeight/2, cx = x, cy = y;
+  addEventListener('pointermove', e => { x = e.clientX; y = e.clientY; d.style.transform = `translate(${x}px,${y}px)`; }, {passive:true});
+  (function loop(){ cx += (x-cx)*.18; cy += (y-cy)*.18; c.style.transform = `translate(${cx}px,${cy}px)`; requestAnimationFrame(loop); })();
+  document.addEventListener('pointerover', e => c.classList.toggle('hover', !!e.target.closest('a,button,.work,select,input,textarea,label')));
+
+  $$('.magnetic').forEach(b => {
+    b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(); b.style.transform = `translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`; });
+    b.addEventListener('pointerleave', () => b.style.transform = '');
+  });
+  document.addEventListener('pointermove', e => {
+    const g = e.target.closest?.('.gc'); if (g) { const r = g.getBoundingClientRect(); g.style.setProperty('--mx', (e.clientX-r.left)+'px'); g.style.setProperty('--my', (e.clientY-r.top)+'px'); }
+    const w = e.target.closest?.('.work'); if (w) { const r = w.getBoundingClientRect(); const px = (e.clientX-r.left)/r.width-.5, py = (e.clientY-r.top)/r.height-.5; w.style.transform = `perspective(900px) rotateY(${px*6}deg) rotateX(${-py*6}deg) translateY(-6px)`; }
+  }, {passive:true});
+  document.addEventListener('pointerout', e => { const w = e.target.closest?.('.work'); if (w && !w.contains(e.relatedTarget)) w.style.transform = ''; });
+}
+
+/* =====================================================================
+   10) 3D ROBOT (three.js)
+   ===================================================================== */
+async function initRobot(){
+  const wrap = $('#robotWrap'), canvas = $('#robot');
+  const hasGL = (() => { try { const c = document.createElement('canvas'); return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch(e){ return false; } })();
+  if (!hasGL) { wrap.classList.add('fallback'); return; }
+  let THREE, RoundedBoxGeometry, RoomEnvironment;
+  try {
+    THREE = await import('three');
+    ({ RoundedBoxGeometry } = await import('three/addons/geometries/RoundedBoxGeometry.js'));
+    ({ RoomEnvironment } = await import('three/addons/environments/RoomEnvironment.js'));
+  } catch (e) { console.warn('NEXORA: 3D library failed to load, showing fallback.', e); wrap.classList.add('fallback'); return; }
+
+  const mobile = innerWidth < 760;
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias:true, alpha:true, powerPreference:'high-performance' });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, mobile ? 1.5 : 2));
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.08;
+
+  const scene = new THREE.Scene();
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+  pmrem.dispose();
+  const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 100);
+  camera.position.set(0, 0.35, 10.4);
+  camera.lookAt(0, 0.1, 0);
+
+  /* ---- procedural textures (no image files needed) ---- */
+  const canvasTex = (size, draw) => { const c = document.createElement('canvas'); c.width = c.height = size; draw(c.getContext('2d'), size); const tx = new THREE.CanvasTexture(c); tx.wrapS = tx.wrapT = THREE.RepeatWrapping; return tx; };
+  const noise = (base, amp, brushed) => canvasTex(256, (g, s) => {
+    const img = g.createImageData(s, s);
+    for (let y = 0; y < s; y++) {
+      const row = (Math.random() - .5) * amp;
+      for (let x = 0; x < s; x++) {
+        const v = base + (brushed ? row * .7 + (Math.random() - .5) * amp * .3 : (Math.random() - .5) * amp);
+        const i = (y * s + x) * 4; img.data[i] = img.data[i+1] = img.data[i+2] = Math.max(0, Math.min(255, v)); img.data[i+3] = 255;
+      }
+    }
+    g.putImageData(img, 0, 0);
+  });
+  const glowTex = canvasTex(128, (g, s) => {
+    const r = g.createRadialGradient(s/2, s/2, 0, s/2, s/2, s/2);
+    r.addColorStop(0, 'rgba(255,255,255,1)'); r.addColorStop(.18, 'rgba(225,238,255,.6)');
+    r.addColorStop(.45, 'rgba(190,215,255,.16)'); r.addColorStop(1, 'rgba(0,0,0,0)');
+    g.fillStyle = r; g.fillRect(0, 0, s, s);
+  });
+  glowTex.colorSpace = THREE.SRGBColorSpace;
+  const shellRough = noise(78, 26, false); shellRough.repeat.set(2, 2);
+  const metalRough = noise(88, 70, true);  metalRough.repeat.set(1, 3);
+
+  const M = {
+    shell:  new THREE.MeshPhysicalMaterial({ color:0xe9e9ed, metalness:.05, roughness:1, roughnessMap:shellRough, clearcoat:1, clearcoatRoughness:.08, envMapIntensity:1.1 }),
+    metal:  new THREE.MeshPhysicalMaterial({ color:0x1c1d22, metalness:.92, roughness:1, roughnessMap:metalRough, clearcoat:.35, clearcoatRoughness:.3 }),
+    joint:  new THREE.MeshStandardMaterial({ color:0x111114, metalness:1, roughness:.22 }),
+    rubber: new THREE.MeshStandardMaterial({ color:0x0b0b0c, metalness:0, roughness:.75 }),
+    visor:  new THREE.MeshPhysicalMaterial({ color:0x020203, metalness:.9, roughness:.04, clearcoat:1, clearcoatRoughness:.02, envMapIntensity:1.8 }),
+    led:    new THREE.MeshBasicMaterial({ color:0xeaf2ff, toneMapped:false })
+  };
+  const add = (geo, mat, parent, x=0, y=0, z=0) => { const m = new THREE.Mesh(geo, mat); m.position.set(x, y, z); parent.add(m); return m; };
+  const glow = (parent, x, y, z, s, op=.8) => {
+    const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map:glowTex, color:0xdbe8ff, transparent:true, opacity:op, blending:THREE.AdditiveBlending, depthWrite:false, toneMapped:false }));
+    sp.position.set(x, y, z); sp.scale.set(s, s, 1); parent.add(sp); return sp;
+  };
+  const RB = (w, h, d, r, seg=5) => new RoundedBoxGeometry(w, h, d, seg, r);
+  // narrows a shape towards the bottom (more organic, less "boxy")
+  const taper = (geo, top, bottom) => {
+    geo.computeBoundingBox(); const { min, max } = geo.boundingBox, p = geo.attributes.position;
+    for (let i = 0; i < p.count; i++) { const k = (p.getY(i) - min.y) / (max.y - min.y), s = bottom + (top - bottom) * k; p.setX(i, p.getX(i) * s); p.setZ(i, p.getZ(i) * (1 + (s - 1) * .5)); }
+    p.needsUpdate = true; return geo;
+  };
+
+  const robot = new THREE.Group(); scene.add(robot);
+  const body = new THREE.Group(); robot.add(body);
+
+  /* ---- pelvis + abdomen ---- */
+  add(taper(RB(1.12, .42, .78, .16), 1, .82), M.metal, body, 0, -1.42, 0);
+  [[-1.18, .5], [-1.03, .53], [-.88, .56]].forEach(([y, r], i) => add(new THREE.CylinderGeometry(r, r + .02, .12, 48), i % 2 ? M.joint : M.metal, body, 0, y, 0));
+
+  /* ---- chest ---- */
+  const chest = new THREE.Group(); body.add(chest);
+  add(taper(RB(1.82, 1.38, 1.0, .38, 6), 1, .78), M.shell, chest);
+  add(RB(1.06, .72, .16, .1, 4), M.metal, chest, 0, .1, .47);
+  add(new THREE.TorusGeometry(.27, .045, 20, 64), M.joint, chest, 0, .1, .55);
+  const core = add(new THREE.TorusGeometry(.19, .028, 16, 64), M.led, chest, 0, .1, .565);
+  const coreFill = add(new THREE.CircleGeometry(.15, 48), new THREE.MeshBasicMaterial({ color:0xdfeaff, transparent:true, opacity:.45, toneMapped:false }), chest, 0, .1, .555);
+  const coreGlow = glow(chest, 0, .1, .72, 1.3, .75);
+  add(RB(1.42, .022, .03, .01, 2), M.metal, chest, 0, -.42, .462);
+  const collar = add(new THREE.TorusGeometry(.4, .07, 16, 64), M.metal, chest, 0, .7, 0); collar.rotation.x = Math.PI / 2;
+  [-1, 1].forEach(s => {
+    add(RB(.2, .035, .03, .015, 2), M.led, chest, s * .36, -.22, .49);
+    glow(chest, s * .36, -.22, .56, .35, .3);
+    for (let i = 0; i < 4; i++) {           // side vents follow the tapered surface
+      const y = .32 - i * .1, k = (y + .69) / 1.38, sc = .78 + .22 * k;
+      add(RB(.035, .04, .2, .015, 2), M.metal, chest, s * (.91 * sc - .005), y, 0);
+    }
+  });
+
+  /* ---- neck ---- */
+  const neck = new THREE.Group(); neck.position.y = .78; body.add(neck);
+  add(new THREE.CylinderGeometry(.13, .15, .38, 24), M.rubber, neck, 0, .18, 0);
+  [0, .11, .22].forEach(y => add(new THREE.CylinderGeometry(.18, .18, .05, 32), M.joint, neck, 0, y + .05, 0));
+  [-1, 1].forEach(s => {
+    const curve = new THREE.CatmullRomCurve3([new THREE.Vector3(s * .26, -.08, -.12), new THREE.Vector3(s * .3, .15, -.2), new THREE.Vector3(s * .2, .42, -.16)]);
+    add(new THREE.TubeGeometry(curve, 20, .028, 8, false), M.rubber, neck);
+  });
+
+  /* ---- head ---- */
+  const head = new THREE.Group(); head.position.set(0, 1.52, 0); body.add(head);
+  add(RB(1.16, .98, 1.06, .42, 8), M.shell, head);
+  add(RB(1.0, .64, .22, .24, 6), M.metal, head, 0, -.02, .45);
+  add(RB(.92, .42, .16, .2, 6), M.visor, head, 0, .03, .53);
+  const refl = add(new THREE.PlaneGeometry(.62, .035), new THREE.MeshBasicMaterial({ color:0xffffff, transparent:true, opacity:.22, toneMapped:false }), head, -.06, .18, .615); refl.rotation.z = -.04;
+  const eyeRig = new THREE.Group(); eyeRig.position.set(0, .04, .62); head.add(eyeRig);
+  const eyes = [-1, 1].map(s => {
+    const g = new THREE.Group(); g.position.x = s * .2; eyeRig.add(g);
+    const m = add(new THREE.CapsuleGeometry(.032, .14, 6, 16), M.led, g); m.rotation.z = Math.PI / 2;
+    return { g, gl: glow(g, 0, 0, .03, .5, .6) };
+  });
+  for (let i = 0; i < 5; i++) add(RB(.05, .018, .02, .008, 2), M.joint, head, (i - 2) * .075, -.24, .565);
+  [-1, 1].forEach(s => {
+    const e = add(new THREE.CylinderGeometry(.2, .2, .14, 40), M.metal, head, s * .59, 0, 0); e.rotation.z = Math.PI / 2;
+    const cap = add(new THREE.CylinderGeometry(.13, .13, .04, 40), M.joint, head, s * .67, 0, 0); cap.rotation.z = Math.PI / 2;
+    const r = add(new THREE.TorusGeometry(.15, .012, 10, 48), M.led, head, s * .665, 0, 0); r.rotation.y = Math.PI / 2;
+    glow(head, s * .7, 0, 0, .45, .22);
+  });
+  const ant = new THREE.Group(); ant.position.set(.6, .18, 0); ant.rotation.z = -.25; head.add(ant);
+  add(new THREE.CylinderGeometry(.015, .02, .5, 10), M.joint, ant, 0, .25, 0);
+  const tip = add(new THREE.SphereGeometry(.045, 20, 20), M.led, ant, 0, .52, 0);
+  const tipGlow = glow(ant, 0, .52, 0, .45, .8);
+
+  /* ---- arms with articulated hands ---- */
+  const arms = [-1, 1].map(s => {
+    const sh = new THREE.Group(); sh.position.set(s * 1.08, .42, 0); body.add(sh);
+    add(new THREE.SphereGeometry(.28, 32, 32), M.joint, sh);
+    const pa = add(new THREE.SphereGeometry(.42, 48, 32, 0, Math.PI * 2, 0, Math.PI / 2), M.shell, sh, 0, .04, 0); pa.scale.set(1, .72, 1);
+    add(new THREE.TorusGeometry(.41, .02, 10, 64), M.metal, sh, 0, .04, 0).rotation.x = Math.PI / 2;
+    const upper = new THREE.Group(); sh.add(upper);
+    add(taper(RB(.4, .86, .4, .16), 1, .84), M.shell, upper, 0, -.62, 0);
+    add(RB(.03, .42, .03, .012, 2), M.led, upper, s * .205, -.6, 0);
+    const elbow = new THREE.Group(); elbow.position.y = -1.1; upper.add(elbow);
+    add(new THREE.SphereGeometry(.17, 28, 28), M.joint, elbow);
+    add(new THREE.CylinderGeometry(.19, .19, .12, 32), M.metal, elbow).rotation.z = Math.PI / 2;
+    add(taper(RB(.36, .74, .36, .14), .9, 1.06), M.shell, elbow, 0, -.44, 0);
+    add(new THREE.CylinderGeometry(.12, .13, .1, 24), M.joint, elbow, 0, -.86, 0);
+    const hand = new THREE.Group(); hand.position.y = -.92; elbow.add(hand);
+    add(RB(.26, .24, .15, .06, 3), M.metal, hand, 0, -.11, 0);
+    const fingers = [];
+    for (let i = 0; i < 4; i++) {
+      const f = new THREE.Group(); f.position.set((i - 1.5) * .062, -.23, 0); hand.add(f);
+      add(new THREE.CapsuleGeometry(.024, .07, 4, 10), M.joint, f, 0, -.05, 0);
+      const f2 = new THREE.Group(); f2.position.y = -.11; f.add(f2);
+      add(new THREE.CapsuleGeometry(.022, .06, 4, 10), M.rubber, f2, 0, -.04, 0);
+      fingers.push({ f, f2 });
+    }
+    const th = new THREE.Group(); th.position.set(-s * .13, -.1, .04); th.rotation.z = -s * .6; hand.add(th);
+    add(new THREE.CapsuleGeometry(.025, .08, 4, 10), M.joint, th, 0, -.06, 0);
+    sh.rotation.z = s * .1; elbow.rotation.x = -.4;
+    return { s, sh, elbow, hand, fingers };
+  });
+
+  /* ---- hover base (robot levitates above a light ring) ---- */
+  const base = new THREE.Group(); base.position.y = -2.2; scene.add(base);
+  const baseRing = add(new THREE.TorusGeometry(.78, .012, 8, 128), M.led, base); baseRing.rotation.x = Math.PI / 2;
+  const baseRing2 = add(new THREE.TorusGeometry(1.12, .006, 8, 128), new THREE.MeshBasicMaterial({ color:0xffffff, transparent:true, opacity:.25, toneMapped:false }), base); baseRing2.rotation.x = Math.PI / 2;
+  const baseDisc = add(new THREE.PlaneGeometry(3.4, 3.4), new THREE.MeshBasicMaterial({ map:glowTex, transparent:true, opacity:.35, blending:THREE.AdditiveBlending, depthWrite:false, toneMapped:false }), base); baseDisc.rotation.x = -Math.PI / 2;
+
+  /* ---- orbit rings + particles ---- */
+  const ringMat = new THREE.MeshBasicMaterial({ color:0xffffff, transparent:true, opacity:.16, toneMapped:false });
+  const ring1 = add(new THREE.TorusGeometry(2.6, .006, 8, 220), ringMat, scene, 0, .2, 0); ring1.rotation.x = Math.PI / 2.3;
+  const ring2 = add(new THREE.TorusGeometry(3.15, .004, 8, 220), ringMat.clone(), scene, 0, .2, 0); ring2.material.opacity = .08; ring2.rotation.set(Math.PI / 1.8, .4, 0);
+  const sat = add(new THREE.SphereGeometry(.04, 16, 16), M.led, scene); const satGlow = glow(scene, 0, 0, 0, .5, .7);
+  const N = mobile ? 200 : 460, pos = new Float32Array(N * 3);
+  for (let i = 0; i < N; i++) { const r = 2.3 + Math.random() * 3.4, a = Math.random() * Math.PI * 2; pos[i*3] = Math.cos(a) * r; pos[i*3+1] = (Math.random() - .5) * 5.5; pos[i*3+2] = Math.sin(a) * r - 1; }
+  const pg = new THREE.BufferGeometry(); pg.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const points = new THREE.Points(pg, new THREE.PointsMaterial({ map:glowTex, color:0xffffff, size:.07, transparent:true, opacity:.55, depthWrite:false, blending:THREE.AdditiveBlending }));
+  scene.add(points);
+
+  /* ---- studio lighting ---- */
+  scene.add(new THREE.AmbientLight(0xffffff, .2));
+  const key = new THREE.DirectionalLight(0xffffff, 2.4); key.position.set(3, 4, 5); scene.add(key);
+  const rim = new THREE.DirectionalLight(0xbfd4ff, 3.4); rim.position.set(-4, 2.5, -4); scene.add(rim);
+  const rim2 = new THREE.DirectionalLight(0xffffff, 1.8); rim2.position.set(4, -1, -3); scene.add(rim2);
+  const top = new THREE.DirectionalLight(0xffffff, 1); top.position.set(0, 6, 1); scene.add(top);
+  const coreLight = new THREE.PointLight(0xdfeaff, 2.2, 3); coreLight.position.set(0, .1, 1); chest.add(coreLight);
+  const underLight = new THREE.PointLight(0xdfeaff, 1.4, 3); underLight.position.set(0, -1.9, .4); scene.add(underLight);
+
+  function resize(){
+    const w = wrap.clientWidth, h = wrap.clientHeight; if (!w || !h) return;
+    renderer.setSize(w, h, false); camera.aspect = w / h;
+    camera.position.z = w / h < .85 ? 12.2 : 10.4;
+    camera.updateProjectionMatrix();
+  }
+  new ResizeObserver(resize).observe(wrap); resize();
+
+  const ptr = { x:0, y:0, t:-10 };
+  addEventListener('pointermove', e => { ptr.x = (e.clientX / innerWidth) * 2 - 1; ptr.y = (e.clientY / innerHeight) * 2 - 1; ptr.t = performance.now() / 1000; }, { passive:true });
+  let visible = true;
+  new IntersectionObserver(([en]) => visible = en.isIntersecting).observe(wrap);
+
+  const lerp = (a, b, k) => a + (b - a) * k;
+  const smooth = x => x <= 0 ? 0 : x >= 1 ? 1 : x * x * (3 - 2 * x);
+  const clock = new THREE.Clock();
+  let intro = 0, nextBlink = 2.2, blinkT = -10, nextSac = 1, waveStart = 3.4;
+  const sac = { x:0, y:0 }, look = { x:0, y:0 };
+  canvas.classList.add('on');
+
+  (function frame(){
+    requestAnimationFrame(frame);
+    if (!visible || document.hidden) { clock.getDelta(); return; }
+    const dt = Math.min(clock.getDelta(), .05), t = clock.elapsedTime, now = performance.now() / 1000;
+    intro = Math.min(1, intro + dt * .55); const ei = 1 - Math.pow(1 - intro, 3);
+    const hp = Math.min(1, scrollY / innerHeight);
+
+    // levitation + breathing + weight shift
+    const br = Math.sin(t * 1.5), fl = Math.sin(t * .9);
+    robot.position.y = -.25 + fl * .07 - (1 - ei) * .9 - hp * .5;
+    robot.scale.setScalar(.86 + .14 * ei);
+    chest.scale.set(1 + br * .008, 1 + br * .014, 1 + br * .01);
+    robot.rotation.z = Math.sin(t * .45) * .018;
+
+    // gaze: follow the pointer when it moves, otherwise look around calmly
+    const active = finePointer && now - ptr.t < 3;
+    const tx = active ? ptr.x * .5 : Math.sin(t * .31) * .32 + Math.sin(t * .73 + 1.3) * .12;
+    const ty = active ? ptr.y * .25 : Math.sin(t * .47 + .6) * .08;
+    look.x = lerp(look.x, tx, .045); look.y = lerp(look.y, ty, .045);
+    robot.rotation.y = lerp(robot.rotation.y, look.x * .3 + hp * .6, .03);
+    head.rotation.set(look.y, look.x * .75, -look.x * .08 + Math.sin(t * .6) * .015);
+    neck.rotation.y = look.x * .3;
+
+    // eye micro-movements + natural blinking (sometimes double)
+    if (t > nextSac) { sac.x = (Math.random() - .5) * .05; sac.y = (Math.random() - .5) * .025; nextSac = t + .6 + Math.random() * 2.2; }
+    eyeRig.position.x = lerp(eyeRig.position.x, sac.x, .35);
+    eyeRig.position.y = lerp(eyeRig.position.y, .04 + sac.y, .35);
+    if (t > nextBlink) { blinkT = t; nextBlink = t + (Math.random() < .2 ? .3 : 2.4 + Math.random() * 3.5); }
+    const bt = t - blinkT, eo = bt >= 0 && bt < .18 ? Math.max(.06, Math.abs(bt - .09) / .09) : 1;
+    eyes.forEach(e => { e.g.scale.y = eo; e.gl.material.opacity = .6 * eo; });
+
+    // friendly wave every ~15 s
+    const wt = t - waveStart; let w = 0;
+    if (wt > 0 && wt < 3.2) w = smooth(wt / .6) * smooth((3.2 - wt) / .6);
+    else if (wt >= 3.2) waveStart = t + 12 + Math.random() * 6;
+    arms.forEach(a => {
+      const iw = a.s === 1 ? w : 0;
+      a.sh.rotation.z = a.s * .1 + Math.sin(t * .9 + a.s) * .015 + iw * 1.25;
+      a.sh.rotation.x = Math.sin(t * 1.1 + a.s) * .05 * (1 - iw);
+      a.sh.position.y = .42 + br * .012;
+      a.elbow.rotation.x = lerp(-.4 + Math.sin(t * 1.2 + a.s * 2) * .05, 0, iw);
+      a.elbow.rotation.z = iw * (1.35 + Math.sin(t * 7.5) * .28);
+      a.hand.rotation.y = iw * 1.4 * a.s;
+      a.fingers.forEach((f, i) => { const c = (.35 + Math.sin(t * 1.3 + i * .5) * .08) * (1 - iw * .85); f.f.rotation.x = c; f.f2.rotation.x = c * 1.2; });
+    });
+    if (w > 0) { head.rotation.z += w * .1; head.rotation.y *= 1 - w * .5; }
+
+    // lights
+    const pulse = .5 + Math.sin(t * 2.2) * .5;
+    coreFill.material.opacity = .25 + pulse * .4;
+    coreGlow.material.opacity = .45 + pulse * .4; coreGlow.scale.setScalar(1.1 + pulse * .35);
+    coreLight.intensity = 1.4 + pulse * 1.8; core.rotation.z = t * .5;
+    const beacon = (t % 1.8) < .12 ? 1 : .3;
+    tipGlow.material.opacity = .25 + beacon * .65; tip.scale.setScalar(.8 + beacon * .3);
+    baseRing.scale.setScalar(1 + fl * .04); baseRing2.scale.setScalar(1 - fl * .03);
+    baseDisc.material.opacity = .34 - fl * .1; underLight.intensity = 1.2 - fl * .4;
+    ring1.rotation.z = t * .12; ring2.rotation.z = -t * .08;
+    sat.position.set(Math.cos(t * .7) * 2.6, .2 + Math.sin(t * .7) * .9, Math.sin(t * .7) * 1.04);
+    satGlow.position.copy(sat.position);
+    points.rotation.y = t * .03;
+    renderer.render(scene, camera);
+  })();
+}
+
+
+/* =====================================================================
+   PRE-LAUNCH ADDITIONS: reviews, FAQ, location, CTAs, structured data
+   ===================================================================== */
+const hasAddr = () => !!(CONFIG.address && (CONFIG.address.street || CONFIG.address.city));
+const addrLine = () => { const a = CONFIG.address || {}; return [a.street, [a.postalCode, a.city].filter(Boolean).join(' '), a.region, a.country].filter(Boolean).join(', '); };
+const STAR = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z"/></svg>';
+const msgLink = () => CONFIG.telegram ? `https://t.me/${CONFIG.telegram}` : CONFIG.whatsapp ? `https://wa.me/${CONFIG.whatsapp}` : CONFIG.email ? `mailto:${CONFIG.email}` : '#contact';
+
+function renderFAQ(){
+  $('#faqList').innerHTML = [1,2,3,4,5].map((n,i) => `<details class="faq-item"${i===0?' open':''}><summary><span data-i18n="faq.${n}.q"></span><i aria-hidden="true"></i></summary><div class="faq-a" data-i18n="faq.${n}.a"></div></details>`).join('');
+}
+function renderReviews(){
+  const box = $('#reviewsBox'), list = (CONFIG.reviews || []).filter(r => r && r.name && r.text);
+  if (list.length) {
+    box.innerHTML = `<div class="reviews-grid">${list.map(r => { const n = Math.max(0, Math.min(5, Math.round(+r.rating || 0)));
+      return `<figure class="review gc">${n ? `<div class="stars" role="img" data-rated="${n}">${STAR.repeat(n)}</div>` : ''}
+        <blockquote>“${esc(r.text)}”</blockquote>
+        <figcaption><span><b>${esc(r.name)}</b><small>${esc([r.company, r.date].filter(Boolean).join(' · '))}</small></span>
+        ${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener nofollow"><span data-i18n="rev.source"></span>: ${esc(r.source || 'link')}</a>` : (r.source ? `<small>${esc(r.source)}</small>` : '')}</figcaption></figure>`; }).join('')}</div>
+      ${CONFIG.reviewsUrl ? `<div class="reviews-more"><a class="btn btn-ghost" href="${esc(CONFIG.reviewsUrl)}" target="_blank" rel="noopener"><span data-i18n="rev.all"></span></a></div>` : ''}`;
+  } else {
+    box.innerHTML = `<div class="reviews-empty"><span class="ic">${STAR}</span><div><h3 data-i18n="rev.emptyT"></h3><p data-i18n="rev.emptyD"></p></div>
+      <a href="#contact" class="btn btn-primary" data-order="web"><span data-i18n="rev.cta"></span>${svg('arrow')}</a></div>
+      ${CONFIG.setupHints ? '<p class="setup" style="margin-top:14px" data-i18n="setup.reviews"></p>' : ''}
+      ${CONFIG.reviewsUrl ? `<div class="reviews-more"><a class="btn btn-ghost" href="${esc(CONFIG.reviewsUrl)}" target="_blank" rel="noopener"><span data-i18n="rev.all"></span></a></div>` : ''}`;
+  }
+}
+function renderLocation(){
+  const sec = $('#location');
+  if (!hasAddr() && !CONFIG.setupHints) { sec.hidden = true; return; }
+  const hours = CONFIG.hours && CONFIG.hours[lang];
+  const contacts = [CONFIG.phone && `<a class="plain" href="tel:${CONFIG.phone.replace(/[^+\d]/g,'')}">${esc(CONFIG.phone)}</a>`, CONFIG.email && `<a class="plain" href="mailto:${esc(CONFIG.email)}">${esc(CONFIG.email)}</a>`].filter(Boolean).join('');
+  $('#locInfo').innerHTML = hasAddr()
+    ? `<div><h3 data-i18n="loc.address"></h3><address>${esc(addrLine())}</address></div>
+       ${hours ? `<div><h3 data-i18n="loc.hours"></h3><p>${esc(hours)}</p></div>` : ''}
+       ${contacts ? `<div><h3 data-i18n="loc.contacts"></h3>${contacts}</div>` : ''}
+       <div><a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(addrLine())}"><span data-i18n="loc.dir"></span>${svg('arrow')}</a></div>`
+    : `<p class="setup" data-i18n="setup.address"></p>${contacts ? `<div><h3 data-i18n="loc.contacts"></h3>${contacts}</div>` : ''}`;
+  applyTextOnly($('#locInfo'));
+  renderMap();
+}
+function renderMap(){
+  const map = $('#map'); if (!map || $('#location').hidden) return;
+  const granted = window.NexoraConsent && NexoraConsent.get() && NexoraConsent.get().media;
+  if (hasAddr() && granted) {
+    if (!map.querySelector('iframe')) map.innerHTML = `<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="${esc(t('loc.mapTitle'))}" src="https://www.google.com/maps?q=${encodeURIComponent(addrLine())}&output=embed"></iframe>`;
+    return;
+  }
+  map.innerHTML = `<div class="map-ph"><span class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+    ${hasAddr() ? `<button type="button" class="btn btn-ghost btn-sm" id="loadMap"><span data-i18n="loc.load"></span></button><p><span data-i18n="loc.consent"></span> <a href="privacy.html" data-i18n="footer.privacy"></a></p>` : `<p class="setup" data-i18n="setup.address"></p>`}</div>`;
+  const b = $('#loadMap'); if (b) b.addEventListener('click', () => { if (window.NexoraConsent) NexoraConsent.set({ media:true }); else { map.dataset.force = 1; } });
+  applyTextOnly(map);
+}
+function applyTextOnly(root){ $$('[data-i18n]', root).forEach(el => el.textContent = t(el.dataset.i18n)); }
+function renderQuick(){
+  const q = [];
+  if (CONFIG.telegram) q.push(`<a href="https://t.me/${CONFIG.telegram}" target="_blank" rel="noopener" aria-label="Telegram" data-track="telegram">${svg('tg')}</a>`);
+  if (CONFIG.whatsapp) q.push(`<a href="https://wa.me/${CONFIG.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp" data-track="whatsapp">${svg('wa')}</a>`);
+  if (CONFIG.phone) q.push(`<a href="tel:${CONFIG.phone.replace(/[^+\d]/g,'')}" aria-label="Phone" data-track="phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>`);
+  $('#heroQuick').innerHTML = q.join('');
+  const m = $('#mctaMsg'); m.href = msgLink(); if (/^https?:/.test(m.href)) { m.target = '_blank'; m.rel = 'noopener'; }
+  if (hasAddr()) { const f = $('#footAddr'); f.hidden = false; f.textContent = addrLine(); }
+}
+function langExtras(){
+  const n = +CONFIG.responseTimeHours || 0;
+  $$('[data-reply]').forEach(el => { el.hidden = !n; if (n) el.textContent = t('reply').replace('{n}', n); });
+  $$('#workGrid .work-media').forEach(m => m.setAttribute('aria-label', t('work.alt').replace('{name}', m.dataset.alt)));
+  $$('[data-rated]').forEach(el => el.setAttribute('aria-label', t('rev.rated').replace('{n}', el.dataset.rated)));
+  if ($('#location') && !$('#location').hidden) { renderLocationTexts(); }
+  updateLD();
+}
+function renderLocationTexts(){ const ifr = $('#map iframe'); if (ifr) ifr.title = t('loc.mapTitle'); const h = CONFIG.hours && CONFIG.hours[lang]; if (hasAddr() && h !== undefined) renderLocation(); }
+// structured data built from the real settings only (nothing invented)
+function updateLD(){
+  const site = (CONFIG.siteUrl || '').replace(/\/$/, ''), a = CONFIG.address || {};
+  const org = { '@type':'ProfessionalService', '@id':site + '/#org', name:CONFIG.businessName || 'NEXORA', url:site + '/', image:site + '/og/og-home.jpg', description:t('meta.desc'),
+    hasOfferCatalog:{ '@type':'OfferCatalog', name:t('svc.label'), itemListElement:SERVICES.map((s,i) => ({ '@type':'Offer', itemOffered:{ '@type':'Service', name:t(`svc.${i+1}.t`), description:t(`svc.${i+1}.d`) } })) } };
+  if (CONFIG.legalName) org.legalName = CONFIG.legalName;
+  if (CONFIG.email) org.email = CONFIG.email;
+  if (CONFIG.phone) org.telephone = CONFIG.phone;
+  if (hasAddr()) org.address = Object.assign({ '@type':'PostalAddress' }, a.street && { streetAddress:a.street }, a.city && { addressLocality:a.city }, a.postalCode && { postalCode:a.postalCode }, a.region && { addressRegion:a.region }, a.country && { addressCountry:a.country });
+  const same = [CONFIG.instagram, CONFIG.facebook, CONFIG.linkedin, CONFIG.behance, CONFIG.telegram && `https://t.me/${CONFIG.telegram}`].filter(Boolean); if (same.length) org.sameAs = same;
+  const faq = { '@type':'FAQPage', '@id':site + '/#faq', mainEntity:[1,2,3,4,5].map(n => ({ '@type':'Question', name:t(`faq.${n}.q`), acceptedAnswer:{ '@type':'Answer', text:t(`faq.${n}.a`) } })) };
+  let el = $('#ld-dynamic'); if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = 'ld-dynamic'; document.head.appendChild(el); }
+  el.textContent = JSON.stringify({ '@context':'https://schema.org', '@graph':[org, faq] });
+}
+// "Order" buttons preselect the service in the form
+document.addEventListener('click', e => { const o = e.target.closest('[data-order]'); if (o) { const v = o.dataset.order; const sel = $('#f-service'); if (sel && [...sel.options].some(x => x.value === v)) sel.value = v; } });
+// analytics events (only sent if the visitor accepted analytics)
+document.addEventListener('click', e => {
+  const a = e.target.closest('a'); if (!a || !window.NexoraConsent) return;
+  if (a.dataset.track || /^(tel:|mailto:)|t\.me|wa\.me/.test(a.getAttribute('href') || '')) NexoraConsent.track('contact_click', { method: a.dataset.track || (a.href.split(':')[0]) });
+  else if (a.closest('.btn-primary') || a.matches('.btn-primary')) NexoraConsent.track('cta_click', { label: a.textContent.trim().slice(0,40) });
+});
+document.addEventListener('nexora:consent', renderMap);
+// hide the mobile order bar while the form is on screen
+new IntersectionObserver(([en]) => $('#mcta').classList.toggle('away', en.isIntersecting), { threshold:0 }).observe($('#contactForm'));
+
+/* =====================================================================
+   11) BOOT
+   ===================================================================== */
+renderLangSwitches(); renderMarquee(); renderServices(); renderWork(); renderProcess(); renderPricing(); renderValues(); renderOrbit(); renderContacts(); renderFAQ(); renderReviews(); renderLocation(); renderQuick();
+lang = detectLang();
+applyLang();
+initReveal();
+initPointerFX();
+onScroll();
+$('#year').textContent = new Date().getFullYear();
+addEventListener('resize', movePills);
+document.fonts?.ready.then(movePills);
+
+function ready(){ $('#loader').classList.add('done'); document.body.classList.add('ready'); setTimeout(movePills, 50); }
+if (document.readyState === 'complete') setTimeout(ready, 600); else addEventListener('load', () => setTimeout(ready, 500));
+setTimeout(ready, 2500);   // safety net if a font/CDN is slow
+initRobot();
+</script>
+</body>
+</html>

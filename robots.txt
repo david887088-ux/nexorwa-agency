@@ -1,0 +1,9 @@
+# NEXORA — robots.txt
+# Replace https://YOUR-DOMAIN.com below with your real domain.
+# Note: robots.txt only works at the root of a domain (e.g. a custom domain or username.github.io).
+User-agent: *
+Allow: /
+
+# Thank-you and 404 pages are excluded via <meta name="robots" content="noindex">.
+
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
